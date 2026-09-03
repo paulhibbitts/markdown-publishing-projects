@@ -83,6 +83,19 @@
 </head>
 <body>
 
+<!-- Icon sprite: path data defined once per icon, reused below via <use>.
+     Add a new <symbol id="icon-NAME"> here for any icon used in more than
+     one place; icons used only once stay inlined where they appear. -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="icon-bolt" viewBox="0 0 24 24">
+    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"/>
+  </symbol>
+  <symbol id="icon-sidebar" viewBox="0 0 24 24">
+    <path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12"/>
+    <path d="M9 4l0 16"/>
+  </symbol>
+</svg>
+
 <!-- ====================================================================
      CONTENT GUIDE — this page has one content block per section, in this order:
        1. HEADER / NAV        — brand text, nav links
@@ -119,7 +132,10 @@
     <p class="lede" data-md>No build step, full portability – pick your level of publishing capability: publish instantly with Docsify-This, launch a whole site on GitHub Pages with a Starter Kit, or level up to Grav Helios for a full CMS with an admin panel. Everything here is free and open-source, including the Grav Helios skeletons, which require the paid Premium Helios theme.</p>
     <hr class="hero-rule">
 
-    <!-- Sample markdown source (left) and its rendered output (right) — illustrative, not tied to a real file -->
+    <!-- Sample markdown source (left, illustrative, not tied to a real file) and
+         its actual rendered output (right) — the right pane carries data-md /
+         data-md-list too, so it's genuinely produced by md-render.js on page
+         load, the same as every other card body on this page. -->
     <div class="chrome">
       <div class="chrome-bar">
         <div class="chrome-dots"><span></span><span></span><span></span></div>
@@ -145,13 +161,13 @@ Turn any Markdown file into a
         <div class="demo-pane rendered">
           <p class="pane-label">Published page</p>
           <p class="demo-title">Docsify&#8209;This</p>
-          <p class="demo-body">Turn any Markdown file into a <strong>shareable, styled web page</strong> &ndash; instantly.</p>
-          <ul>
-            <li>No signup, no install</li>
-            <li>Embeds in Canvas, Moodle, WordPress, or any page</li>
-            <li>Point-and-click page builder</li>
+          <p class="demo-body" data-md>Turn any Markdown file into a **shareable, styled web page** &ndash; instantly.</p>
+          <ul data-md-list>
+            - No signup, no install
+            - Embeds in Canvas, Moodle, WordPress, or any page
+            - Point-and-click page builder
           </ul>
-          <p class="demo-link"><a class="tlink" href="https://docsify-this.net" target="_blank" rel="noopener">Try it live &rarr;</a></p>
+          <p class="demo-link" data-md>[Try it live &rarr;](https://docsify-this.net)</p>
         </div>
       </div>
     </div>
@@ -165,14 +181,14 @@ Turn any Markdown file into a
     <div class="track">
       <!-- Category 1: Docsify-This -->
       <div class="stop tk">
-        <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"/></svg></div>
+        <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-bolt"/></svg></div>
         <p class="label">Instant &middot; <a href="https://docsify.js.org" target="_blank" rel="noopener">Docsify</a></p>
         <h3>Docsify-This</h3>
         <p data-md>Point at a file, published instantly, nothing installed</p>
       </div>
       <!-- Category 2: Docsify Starter Kits -->
       <div class="stop tk">
-        <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12"/><path d="M9 4l0 16"/></svg></div>
+        <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-sidebar"/></svg></div>
         <p class="label">Static Site &middot; <a href="https://docsify.js.org" target="_blank" rel="noopener">Docsify</a></p>
         <h3>Starter Kits</h3>
         <p data-md>A whole repo, your own domain and CSS, zero build step</p>
@@ -215,7 +231,7 @@ Turn any Markdown file into a
     <!-- Card 1: Docsify-This -->
     <article class="project tk green">
       <div class="project-head">
-        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"/></svg></div>
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-bolt"/></svg></div>
         <span class="project-tag">Instant &middot; Docsify</span>
         <div class="badge-row">
           <span class="badge tk"><span aria-hidden="true">&#9733;</span> 147</span>
@@ -242,7 +258,7 @@ Turn any Markdown file into a
     <!-- Card 2: Docsify Starter Kits -->
     <article class="project tk">
       <div class="project-head">
-        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12"/><path d="M9 4l0 16"/></svg></div>
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-sidebar"/></svg></div>
         <span class="project-tag">Static Site &middot; Docsify</span>
       </div>
       <div class="project-body">
