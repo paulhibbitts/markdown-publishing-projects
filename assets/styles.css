@@ -241,6 +241,8 @@ a{color:inherit;}
 .stop.tk .marker{border:1.5px solid var(--teal); color:var(--teal);}
 .stop.am .marker{border:1.5px solid var(--amber); color:var(--amber);}
 .stop .label{font-size:var(--text-min); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.02em; margin:0 0 8px;}
+.stop .label a{text-decoration:underline; text-decoration-color:currentColor; text-underline-offset:2px; opacity:0.75;}
+.stop .label a:hover{opacity:1;}
 .stop.tk .label{color:var(--teal);}
 .stop.am .label{color:var(--amber);}
 .stop h3{font-family:var(--font-sans); font-size:1.28rem; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; text-wrap:balance;}
@@ -321,12 +323,8 @@ a{color:inherit;}
 .badge.am{background:var(--amber-soft); color:var(--amber);}
 .badge.green{background:var(--green-soft); color:var(--green);}
 .badge.plain{background:var(--line); color:var(--ink-soft);}
-.badge.outline{background:transparent; border:1.5px solid currentColor; padding:3.5px 13px;}
 /* an <a> badge gets a subtle hover cue so it still reads as clickable */
 a.badge:hover{filter:brightness(0.94);}
-a.badge.tk.outline:hover{background:var(--teal); color:var(--surface);}
-a.badge.am.outline:hover{background:var(--amber); color:var(--surface);}
-a.badge.green.outline:hover{background:var(--green); color:var(--surface);}
 
 /* inline text link within prose, e.g. "the Grav Premium Helios theme" */
 .tlink{color:var(--teal); font-weight:600; text-decoration:none;}
