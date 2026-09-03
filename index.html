@@ -1,0 +1,366 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Edit the text in each tag below; nothing here is visible on the page itself.
+     ==================================================================== -->
+<title>Open Source Markdown Publishing Toolkit | HibbittsDesign.org</title>
+<meta name="description" content="Four open-source tools for turning Markdown files into published websites – from instant Markdown publishing to a full course-hub and open-reader CMS.">
+<link rel="canonical" href="https://projects.hibbittsdesign.org/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://projects.hibbittsdesign.org/">
+<meta property="og:title" content="Open Source Markdown Publishing Toolkit – HibbittsDesign.org">
+<meta property="og:description" content="Docsify-This, the Docsify Starter Kits, and Grav Helios (Course Hub &amp; Open Reader) – three ways to turn Markdown files into a published website, in order of how much publishing capability you want.">
+<meta property="og:image" content="https://projects.hibbittsdesign.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Open Source Markdown Publishing Toolkit – HibbittsDesign.org">
+<meta name="twitter:description" content="Four open-source tools for turning Markdown files into published websites – from instant Markdown publishing to a full course-hub and open-reader CMS.">
+<meta name="twitter:image" content="https://projects.hibbittsdesign.org/og-image.png">
+
+<!-- Structured data for search engines — one entry per project, mirrors the four cards below -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "HibbittsDesign.org Open Source Markdown Publishing Toolkit",
+  "itemListElement": [
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 1,
+      "name": "Docsify-This",
+      "url": "https://docsify-this.net",
+      "codeRepository": "https://github.com/hibbitts-design/docsify-this",
+      "description": "Instantly publish Markdown files as shareable, styled web pages – one page or a whole site – with no signup or build step."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 2,
+      "name": "Docsify Open Publishing & Course Starter Kits",
+      "url": "https://github.com/hibbitts-design/docsify-open-publishing-starter-kit",
+      "codeRepository": "https://github.com/hibbitts-design/docsify-open-publishing-starter-kit",
+      "description": "Ready-to-use GitHub Pages templates for publishing a full Markdown-based documentation, course, or portfolio site."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 3,
+      "name": "Grav Helios Course Hub",
+      "url": "https://learn.hibbittsdesign.org",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-course-hub",
+      "description": "A single- or multi-course hub CMS built on Grav, for educators publishing portable, file-based course sites."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 4,
+      "name": "Grav Helios Open Reader",
+      "url": "https://demo.hibbittsdesign.org/grav-helios-open-reader/",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-open-reader",
+      "description": "A web-first, database-free open reader platform for publishing open textbooks and OER, built on Grav CMS."
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- ====================================================================
+     CONTENT GUIDE — this page has one content block per section, in this order:
+       1. HEADER / NAV        — brand text, nav links
+       2. HERO                — headline, subhead, markdown-to-published demo
+       3. LADDER               — "three levels of capability" step copy
+       4. PICKER               — "which one do I need?" Q&A rows
+       5. PROJECT CARDS (x4)   — Docsify-This, Starter Kits, Course Hub, Open Reader
+       6. FREE GRAV SKELETONS  — the four no-cost Grav alternatives, plus the Git Page Link plugin
+       7. FOOTER               — byline + links
+     Search for the "====" banners below to jump to any section. Styling lives
+     in assets/styles.css and shouldn't need to change when only editing text.
+     ==================================================================== -->
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <a class="brand" href="https://www.hibbittsdesign.org" target="_blank" rel="noopener"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt="">HibbittsDesign.org<strong> / projects</strong></a>
+    <nav>
+      <a href="#ladder">The Toolkit</a>
+      <a href="#projects">Projects</a>
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <!-- ============ 2. HERO — headline, subhead, markdown-to-published demo ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge plain">Open Source</span>
+      <span class="badge plain">MIT Licensed</span>
+      <span class="badge plain">No Database Required</span>
+    </div>
+    <h1>Three Ways to Turn Markdown Into a Website</h1>
+    <p class="lede">No build step, full portability &ndash; pick your level of publishing capability: publish instantly with Docsify-This, launch a whole site on GitHub Pages with a Starter Kit, or level up to Grav Helios for a full CMS with an admin panel. Everything here is free and open-source, including the Grav Helios skeletons &ndash; though they're made possible by the Premium Helios theme.</p>
+    <hr class="hero-rule">
+
+    <!-- Sample markdown source (left) and its rendered output (right) — illustrative, not tied to a real file -->
+    <div class="chrome">
+      <div class="chrome-bar">
+        <div class="chrome-dots"><span></span><span></span><span></span></div>
+        <span class="chrome-url">yoursite.md &rarr; published</span>
+      </div>
+      <div class="demo">
+        <div class="demo-pane source">
+          <p class="pane-label"><span class="dot"></span>guide.md<a class="md-help" href="https://www.markdownguide.org/" target="_blank" rel="noopener">New to Markdown?</a></p>
+          <pre class="src"><span class="h"># Docsify&#8209;This</span>
+
+Turn any Markdown file into a
+<span class="b">**shareable, styled web page**</span> &ndash; instantly.
+
+<span class="l">- No signup, no install
+- Embeds in Canvas, Moodle, WordPress, or any page
+- Point-and-click page builder</span>
+
+<span class="k">[Try it live &rarr;](https://docsify-this.net)</span></pre>
+        </div>
+        <div class="demo-arrow" aria-hidden="true">
+          <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M1 8H21M21 8L14 1M21 8L14 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="demo-pane rendered">
+          <p class="pane-label">Published page</p>
+          <p class="demo-title">Docsify&#8209;This</p>
+          <p class="demo-body">Turn any Markdown file into a <strong>shareable, styled web page</strong> &ndash; instantly.</p>
+          <ul>
+            <li>No signup, no install</li>
+            <li>Embeds in Canvas, Moodle, WordPress, or any page</li>
+            <li>Point-and-click page builder</li>
+          </ul>
+          <p class="demo-link"><a class="tlink" href="https://docsify-this.net" target="_blank" rel="noopener">Try it live &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+    <p class="demo-caption">The same Markdown file, before and after &ndash; this is what every project below does, at a different scale.</p>
+  </section>
+
+  <!-- ============ 3. LADDER — "three levels of capability" step copy ============ -->
+  <section class="ladder" id="ladder">
+    <h2>One idea, three levels of capability</h2>
+    <p class="lede">Start with Docsify-This to publish instantly, no repo required. Move to a Starter Kit when you want your own domain or custom CSS. Graduate to Grav Helios &ndash; Course Hub or Open Reader, depending on what you're publishing &ndash; when you want a full CMS with an admin panel, still just Markdown underneath.</p>
+    <div class="track">
+      <!-- Category 1: Docsify-This -->
+      <div class="stop tk">
+        <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <p class="label">Instant &middot; Docsify</p>
+        <h3>Docsify-This</h3>
+        <p>Point at a file, published instantly, nothing installed</p>
+      </div>
+      <!-- Category 2: Docsify Starter Kits -->
+      <div class="stop tk">
+        <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 9v12"/></svg></div>
+        <p class="label">Static Site &middot; Docsify</p>
+        <h3>Starter Kits</h3>
+        <p>A whole repo, your own domain and CSS, zero build step</p>
+      </div>
+      <!-- Category 3: Grav Helios (Course Hub & Open Reader) -->
+      <div class="stop am">
+        <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="9" cy="18" r="2"/></svg></div>
+        <p class="label">Full CMS &middot; Grav Helios</p>
+        <h3>Course Hub &amp; Open Reader</h3>
+        <p>A flat-file CMS (Grav) with a full admin panel, no database required</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. PICKER — "which one do I need?" Q&A rows ============ -->
+  <section class="picker">
+    <h2>Which one do I need?</h2>
+    <div class="prow">
+      <p class="q"><strong>I want to publish a page &ndash; or several &ndash; right now,</strong> with no setup and nothing to install.</p>
+      <span class="a tk">Docsify&#8209;This</span>
+    </div>
+    <div class="prow">
+      <p class="q"><strong>I want my own domain or custom CSS,</strong> with a whole site living in my own GitHub repo, deployed to GitHub Pages for free.</p>
+      <span class="a tk">Docsify Starter Kits</span>
+    </div>
+    <div class="prow">
+      <p class="q"><strong>I'm building a single or multiple course site</strong> and want to manage it all from one admin panel.</p>
+      <span class="a am">Grav Helios Course Hub</span>
+    </div>
+    <div class="prow">
+      <p class="q"><strong>I'm publishing an open textbook or other long-form OER</strong> and want a web-first reader experience, no database required.</p>
+      <span class="a am">Grav Helios Open Reader</span>
+    </div>
+  </section>
+
+  <!-- ============ 5. PROJECT CARDS — Docsify-This, Starter Kits, Course Hub, Open Reader ============ -->
+  <section class="projects" id="projects">
+    <h2 class="sr-only">Projects</h2>
+
+    <!-- Card 1: Docsify-This -->
+    <article class="project tk green">
+      <div class="project-head">
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <span class="project-tag">Instant &middot; Docsify</span>
+        <div class="badge-row">
+          <span class="badge tk"><span aria-hidden="true">&#9733;</span> 147</span>
+          <span class="badge tk"><span aria-hidden="true">🏆</span> Award Finalist</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>Docsify&#8209;This <span class="version-tag">v2.0 &middot; Docsify v5</span></h3>
+        <p>Turn any online Markdown file into a shareable, styled web page or embeddable widget &ndash; instantly, with no signup and no build step. Point it at a file on GitHub, Codeberg, or anywhere public, and it's a live page; point it at several, and it's a full multi-page site with sidebar navigation built in. Open Infrastructure Finalist, 2024 Open Education Awards for Excellence.</p>
+        <ul class="feat-list">
+          <li>No signup, no install</li>
+          <li>Embeds in Canvas, Moodle, WordPress, or any page</li>
+          <li>Point-and-click page builder</li>
+          <li>Rich content: H5P, LaTeX, Mermaid diagrams &amp; more</li>
+          <li>Customizable fonts, colors &amp; dark mode</li>
+        </ul>
+        <div class="links">
+          <a class="cta green" href="https://docsify-this.net" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it live</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/docsify-this" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2: Docsify Starter Kits -->
+    <article class="project tk">
+      <div class="project-head">
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 9v12"/></svg></div>
+        <span class="project-tag">Static Site &middot; Docsify</span>
+      </div>
+      <div class="project-body">
+        <h3>Docsify Starter Kits <span class="version-tag">Docsify v5</span></h3>
+        <p>Ready-to-use templates for building a full Markdown-based site on GitHub Pages (free hosting), with room for your own domain and full control over the CSS &ndash; no build tooling, edit pages directly on GitHub.</p>
+        <ul class="feat-list">
+          <li>Your own domain &amp; CSS support</li>
+          <li>Embeds in Canvas, Moodle, Microsoft Teams, or any page</li>
+          <li>Edit-on-GitHub workflow</li>
+        </ul>
+        <div class="kit-grid">
+          <div class="kit">
+            <h4>Open Course Kit</h4>
+            <div class="kit-meta"><span class="badge tk sm"><span aria-hidden="true">&#9733;</span> 51</span></div>
+            <p>Hidden navigation for pages framed inside a course.</p>
+            <div class="links">
+              <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-course-starter-kit/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+              <a class="cta plain" href="https://github.com/hibbitts-design/docsify-open-course-starter-kit" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="kit">
+            <h4>Open MultiCourse Kit</h4>
+            <div class="kit-meta"><span class="badge tk sm"><span aria-hidden="true">&#9733;</span> 13</span></div>
+            <p>The Open Course Kit plus a course-selection layer, for managing several courses from one site.</p>
+            <div class="links">
+              <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-multicourse-starter-kit/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+              <a class="cta plain" href="https://github.com/hibbitts-design/docsify-open-multicourse-starter-kit" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="kit">
+            <h4>Open Publishing Kit</h4>
+            <div class="kit-meta"><span class="badge tk sm"><span aria-hidden="true">&#9733;</span> 61</span></div>
+            <p>Suits articles, tutorials, and documentation.</p>
+            <div class="links">
+              <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+              <a class="cta plain" href="https://github.com/hibbitts-design/docsify-open-publishing-starter-kit" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3: Grav Helios Course Hub -->
+    <article class="project am">
+      <div class="project-head">
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5"/></svg></div>
+        <span class="project-tag">Full CMS &middot; Grav Helios</span>
+        <div class="badge-row">
+          <span class="badge am"><span aria-hidden="true">&#9733;</span> 6</span>
+          <a class="badge am outline" href="https://getgrav.org/premium/helios" target="_blank" rel="noopener">Made Possible by Premium Helios</a>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>Grav Helios Course Hub</h3>
+        <p>A single- or multi-course hub skeleton for the <a class="tlink" href="https://getgrav.org/premium/helios" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50), for educators who want a real course platform without a database. Includes example course content, the Helios Course Hub plugin, and an admin panel for managing everything through the browser.</p>
+        <ul class="feat-list">
+          <li>Single or multi-course</li>
+          <li>Built on Grav CMS 2, no database required</li>
+          <li>Runs on nearly any PHP 8.3+ web host</li>
+          <li>Portable, Git-friendly content</li>
+          <li>Admin panel included</li>
+          <li>Fully customizable pages and CSS</li>
+        </ul>
+        <div class="links">
+          <a class="cta am" href="https://learn.hibbittsdesign.org" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#helios-course-hub" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-helios-course-hub" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4: Grav Helios Open Reader -->
+    <article class="project am">
+      <div class="project-head">
+        <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5h6.5A3.5 3.5 0 0 1 12 8v12a3 3 0 0 0-3-3H2z"/><path d="M22 4.5h-6.5A3.5 3.5 0 0 0 12 8v12a3 3 0 0 1 3-3h7z"/></svg></div>
+        <span class="project-tag">Full CMS &middot; Grav Helios</span>
+        <div class="badge-row"><a class="badge am outline" href="https://getgrav.org/premium/helios" target="_blank" rel="noopener">Made Possible by Premium Helios</a></div>
+      </div>
+      <div class="project-body">
+        <h3>Grav Helios Open Reader</h3>
+        <p>A web-first reader skeleton for open textbooks and other long-form OER, built on the database-free Grav CMS and the <a class="tlink" href="https://getgrav.org/premium/helios" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50). Includes example reader content, the Helios Open Reader plugin, and a full admin panel &ndash; content still lives as ordinary Markdown files, not database rows.</p>
+        <ul class="feat-list">
+          <li>Built for open textbooks &amp; OER</li>
+          <li>Built on Grav CMS 2, no database required</li>
+          <li>Runs on nearly any PHP 8.3+ web host</li>
+          <li>Portable, Git-friendly content</li>
+          <li>Admin panel included</li>
+          <li>Fully customizable pages and CSS</li>
+        </ul>
+        <div class="links">
+          <a class="cta am" href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#helios-open-reader" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-helios-open-reader" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ============ 6. FREE GRAV SKELETONS — the four no-cost Grav alternatives, plus the Git Page Link plugin ============ -->
+  <section class="more">
+    <div class="badge-row more-badge"><span class="badge green">Free &amp; Open Source</span></div>
+    <h2>A Cost-Free Way to Use Grav CMS</h2>
+    <p>Course Hub and Open Reader both build on the paid <a class="tlink" href="https://getgrav.org/premium/helios" target="_blank" rel="noopener">Grav Premium Helios theme</a> &ndash; a purchase that directly funds continued development of the open-source Grav CMS itself. If you're looking for a completely free way to use Grav instead, these skeletons share the same Markdown-and-Git-Sync workflow and browser-based admin panel, all built on free, open-source themes and the newly released Grav 2 &ndash; plus one more free plugin that pairs with any Grav site, skeleton or not:</p>
+    <ul class="more-list">
+      <li><a href="https://github.com/hibbitts-design/grav-skeleton-course-hub" target="_blank" rel="noopener">Open Course Hub</a><span>&ndash; a single-course hub with weekly module navigation</span></li>
+      <li><a href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub" target="_blank" rel="noopener">Open MultiCourse Hub</a><span>&ndash; the same, plus a top-level course-selection layer for managing several courses</span></li>
+      <li><a href="https://github.com/hibbitts-design/grav-skeleton-open-publishing-space" target="_blank" rel="noopener">Open Publishing Space</a><span>&ndash; collaborative Markdown publishing on the free Quark theme</span></li>
+      <li><a href="https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync" target="_blank" rel="noopener">Learn2 with Git Sync</a><span>&ndash; documentation sites on the free Learn2 theme, with search and RSS/Atom feeds</span></li>
+      <li class="more-sep"><a href="https://github.com/hibbitts-design/grav-plugin-git-page-link" target="_blank" rel="noopener">Git Page Link Plugin</a><span>&ndash; adds an "Edit this Page" / "View Source" link back to the Markdown source, on any Grav theme</span></li>
+    </ul>
+    <p class="more-foot"><a href="https://www.hibbittsdesign.org/Grav-Open-Source-Projects-35c0615470e08066a0e6e4a6f208b3d1" target="_blank" rel="noopener">See more details on HibbittsDesign.org &rarr;</a></p>
+  </section>
+
+  <!-- ============ 7. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by Paul Hibbitts. All projects are open source and MIT licensed.</p>
+    <div class="flinks">
+      <a href="https://www.hibbittsdesign.org" target="_blank" rel="noopener">HibbittsDesign.org</a>
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
