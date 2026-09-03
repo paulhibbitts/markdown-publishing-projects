@@ -10,6 +10,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
 
 <!-- ====================================================================
      SITE METADATA — page title, search/social descriptions, structured data.
@@ -75,10 +78,10 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -312,7 +315,7 @@ Turn any Markdown file into a
         </div>
       </div>
       <div class="project-body">
-        <h3>Grav Helios Course Hub</h3>
+        <h3>Grav Helios Course Hub <span class="version-tag">Grav 2 CMS</span></h3>
         <p data-md>A single- or multi-course hub skeleton for the [Grav Premium Helios theme](https://getgrav.org/premium/helios) ($50), for educators who want a real course platform without a database. Includes example course content, the Helios Course Hub plugin, and an admin panel for managing everything through the browser.</p>
         <ul class="feat-list" data-md-list>
           - Single or multi-course
@@ -338,7 +341,7 @@ Turn any Markdown file into a
         <div class="badge-row"><span class="badge am">Made Possible by Premium Helios</span></div>
       </div>
       <div class="project-body">
-        <h3>Grav Helios Open Reader</h3>
+        <h3>Grav Helios Open Reader <span class="version-tag">Grav 2 CMS</span></h3>
         <p data-md>A web-first reader skeleton for open textbooks and other long-form OER, built on the database-free Grav CMS and the [Grav Premium Helios theme](https://getgrav.org/premium/helios) ($50). Includes example reader content, the Helios Open Reader plugin, and a full admin panel – content still lives as ordinary Markdown files, not database rows.</p>
         <ul class="feat-list" data-md-list>
           - Built for open textbooks & OER

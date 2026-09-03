@@ -1,3 +1,23 @@
+/* Self-hosted fonts (assets/fonts/) — vendored from Google Fonts so this
+   page has no external network dependency. Each is a variable font, one
+   file covering its whole weight range; font-display:swap shows fallback
+   text immediately rather than a blank flash while it loads. Licensed
+   under the SIL Open Font License — see assets/fonts/OFL-*.txt. */
+@font-face{
+  font-family:"Public Sans";
+  src:url("fonts/PublicSans-Variable.woff") format("woff");
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:"JetBrains Mono";
+  src:url("fonts/JetBrainsMono-Variable.woff") format("woff");
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+
 :root{
   --paper:#fcfcfb;
   --surface:#ffffff;
@@ -66,6 +86,17 @@ h1,h2,h3{
 }
 a{color:inherit;}
 
+/* Keyboard-focus ring, shown only for keyboard/assistive-tech navigation
+   (not on mouse click). Mirrors the color/border feedback each element
+   already gives on :hover below, so keyboard users get the same cue. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible{
+  outline:2px solid var(--teal);
+  outline-offset:2px;
+  border-radius:2px;
+}
+
 /* header */
 .site-head{
   display:flex; align-items:center; justify-content:space-between;
@@ -92,7 +123,8 @@ a{color:inherit;}
   text-decoration:none;
   color:var(--ink-soft);
 }
-.site-head nav a:hover{color:var(--teal);}
+.site-head nav a:hover,
+.site-head nav a:focus-visible{color:var(--teal);}
 
 /* hero */
 .hero{padding:76px 0 20px;}
@@ -178,7 +210,8 @@ a{color:inherit;}
   border-bottom:1px dotted #8a8f7c;
   margin-left:auto;
 }
-.md-help:hover{color:#c9cabb; border-color:#c9cabb;}
+.md-help:hover,
+.md-help:focus-visible{color:#c9cabb; border-color:#c9cabb;}
 .src{
   font-family:var(--font-mono);
   font-size:1.15rem;
@@ -242,7 +275,8 @@ a{color:inherit;}
 .stop.am .marker{border:1.5px solid var(--amber); color:var(--amber);}
 .stop .label{font-size:var(--text-min); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.02em; margin:0 0 8px;}
 .stop .label a{text-decoration:underline; text-decoration-color:currentColor; text-underline-offset:2px; opacity:0.75;}
-.stop .label a:hover{opacity:1;}
+.stop .label a:hover,
+.stop .label a:focus-visible{opacity:1;}
 .stop.tk .label{color:var(--teal);}
 .stop.am .label{color:var(--amber);}
 .stop h3{font-family:var(--font-sans); font-size:1.28rem; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; text-wrap:balance;}
@@ -324,11 +358,13 @@ a{color:inherit;}
 .badge.green{background:var(--green-soft); color:var(--green);}
 .badge.plain{background:var(--line); color:var(--ink-soft);}
 /* an <a> badge gets a subtle hover cue so it still reads as clickable */
-a.badge:hover{filter:brightness(0.94);}
+a.badge:hover,
+a.badge:focus-visible{filter:brightness(0.94);}
 
 /* inline text link within prose, e.g. "the Grav Premium Helios theme" */
 .tlink{color:var(--teal); font-weight:600; text-decoration:none;}
-.tlink:hover{text-decoration:underline;}
+.tlink:hover,
+.tlink:focus-visible{text-decoration:underline;}
 .project-body h3{font-size:2.3rem; margin-bottom:16px; letter-spacing:-0.025em;}
 /* small, muted version/tech mention next to a card title — mirrors docsify-this.net's own "v2.0" treatment */
 .version-tag{
@@ -388,14 +424,17 @@ a.badge:hover{filter:brightness(0.94);}
   color:var(--ink);
   background:var(--surface);
 }
-.cta:hover{border-color:var(--ink-faint);}
+.cta:hover,
+.cta:focus-visible{border-color:var(--ink-faint);}
 .cta .arrow{font-family:var(--font-mono); font-weight:700;}
 .cta.tk .arrow{color:var(--teal);}
 .cta.am .arrow{color:var(--amber);}
 .cta.green .arrow{color:var(--green);}
-.cta.green:hover{border-color:var(--green);}
+.cta.green:hover,
+.cta.green:focus-visible{border-color:var(--green);}
 .cta.plain{border-color:transparent; background:transparent; color:var(--ink-soft); padding:13px 4px;}
-.cta.plain:hover{color:var(--ink); border-color:transparent;}
+.cta.plain:hover,
+.cta.plain:focus-visible{color:var(--ink); border-color:transparent;}
 
 /* more free skeletons, kept lightweight/secondary so it doesn't compete with the main three-level ladder */
 .more{
@@ -416,11 +455,13 @@ a.badge:hover{filter:brightness(0.94);}
   text-decoration:none; border-bottom:1.5px solid var(--line); padding-bottom:1px;
   white-space:nowrap;
 }
-.more-list a:hover{color:var(--teal); border-color:var(--teal);}
+.more-list a:hover,
+.more-list a:focus-visible{color:var(--teal); border-color:var(--teal);}
 .more-list span{font-size:var(--text-min); color:var(--ink-faint);}
 .more>p.more-foot{margin:44px 0 0; font-size:var(--text-min);}
 .more-foot a{color:var(--teal); font-weight:600; text-decoration:none;}
-.more-foot a:hover{text-decoration:underline;}
+.more-foot a:hover,
+.more-foot a:focus-visible{text-decoration:underline;}
 
 /* footer */
 footer{
@@ -436,7 +477,8 @@ footer{
 footer p{font-size:var(--text-min); color:var(--ink-faint); margin:0;}
 footer .flinks{display:flex; gap:22px;}
 footer .flinks a{font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
-footer .flinks a:hover{color:var(--teal);}
+footer .flinks a:hover,
+footer .flinks a:focus-visible{color:var(--teal);}
 
 @media (max-width:760px){
   body{font-size:18px;}
