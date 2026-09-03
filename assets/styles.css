@@ -3,7 +3,7 @@
   --surface:#ffffff;
   --ink:#1d1e1c;
   --ink-soft:#5c5e5a;
-  --ink-faint:#93958f;
+  --ink-faint:#73756f;  /* darkened from #93958f to clear WCAG AA (4.5:1) for the body copy set in this color */
   --line:#e6e5e1;
   --teal:#3d6f9e;
   --teal-soft:#eaf1f8;
@@ -30,7 +30,7 @@
     --surface:#1e2023;
     --ink:#eeefec;
     --ink-soft:#b3b5b0;
-    --ink-faint:#797b76;
+    --ink-faint:#858785;  /* lightened from #797b76 to clear WCAG AA (4.5:1) for the body copy set in this color */
     --line:#2e3033;
     --teal:#7fabd6;
     --teal-soft:#1e2a35;
