@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page is written as Markdown, not hand-balanced HTML:
+     any element with a data-md (inline text) or data-md-list (bullet list)
+     attribute has its text content rendered as Markdown on page load by
+     assets/markdown/md-render.js. See that file for how it works and how
+     to reuse it elsewhere. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (projects.hibbittsdesign.org).
+     ==================================================================== -->
+<title>Fully Open-Source Grav Projects | projects.HibbittsDesign.org</title>
+<meta name="description" content="Four fully open-source Grav skeletons for course hubs, multi-course sites, and open publishing spaces – no database required, with a browser-based Admin panel.">
+<link rel="canonical" href="https://projects.hibbittsdesign.org/grav-projects.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://projects.hibbittsdesign.org/grav-projects.html">
+<meta property="og:title" content="Fully Open-Source Grav Projects | projects.HibbittsDesign.org">
+<meta property="og:description" content="Four fully open-source Grav skeletons for course hubs, multi-course sites, and open publishing spaces – no database required, with a browser-based Admin panel.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Fully Open-Source Grav Projects | projects.HibbittsDesign.org">
+<meta name="twitter:description" content="Four fully open-source Grav skeletons for course hubs, multi-course sites, and open publishing spaces – no database required, with a browser-based Admin panel.">
+
+<!-- Structured data for search engines — one entry per free skeleton -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Fully Open-Source Grav Projects",
+  "itemListElement": [
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 1,
+      "name": "Grav Open Course Hub",
+      "url": "https://demo.hibbittsdesign.org/grav-open-course-hub",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-course-hub",
+      "description": "A free, single-course hub with weekly module navigation, a browser-based Admin panel, and optional Git Sync."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 2,
+      "name": "Grav Open MultiCourse Hub",
+      "url": "https://demo.hibbittsdesign.org/grav-open-multi-course-hub",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-multicourse-hub",
+      "description": "The Open Course Hub structure plus a top-level course-selection layer for managing several courses from one site."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 3,
+      "name": "Grav Open Publishing Space",
+      "url": "https://demo.hibbittsdesign.org/grav-open-publishing-quark/",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-open-publishing-space",
+      "description": "Collaborative Markdown publishing on the free Quark theme, for writers and publishers rather than course content."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 4,
+      "name": "Grav Learn2 with Git Sync",
+      "url": "https://demo.hibbittsdesign.org/grav-learn2-git-sync/",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync",
+      "description": "A documentation site on the free Learn2 theme, with built-in search and RSS/Atom feeds."
+    }
+  ]
+}
+</script>
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="index.html"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>projects</strong><wbr>.HibbittsDesign.org</span></a><span class="brand-suffix">/ grav projects</span></span>
+    <nav>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ 2. GRAV PROJECTS — heading, intro, four skeleton cards, plugin + comparison + CTA ============ -->
+  <section class="hero">
+    <h1>Fully Open-Source Grav Projects</h1>
+    <p class="lede" data-md>Four fully open-source Grav skeletons for course hubs, multi-course sites, and open publishing spaces &ndash; no database required, with a browser-based Admin panel for day-to-day editing.</p>
+    <p class="lede" data-md>Each shares the same portable Markdown files and optional Git Sync &ndash; Course Hub, MultiCourse Hub, and Publishing Space also support LMS-ready embedding for platforms like Canvas and Moodle.</p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <div class="grav-grid">
+      <div class="grav-card">
+        <h3>Grav Open Course Hub</h3>
+        <p>A free, single-course hub with weekly module navigation &ndash; refreshed in 2026 with accessibility improvements and a Dark Mode option.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-open-course-hub" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#course-hub-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-course-hub" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="grav-card">
+        <h3>Grav Open MultiCourse Hub</h3>
+        <p>The same Course Hub structure, plus a top-level course-selection layer for managing several courses from one site.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-open-multi-course-hub" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#multicourse-hub-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="grav-card">
+        <h3>Grav Open Publishing Space</h3>
+        <p>Collaborative Markdown publishing on the free Quark theme &ndash; suited to writers and publishers rather than course content.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-open-publishing-quark/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#open-publishing-space-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-open-publishing-space" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="grav-card">
+        <h3>Grav Learn2 with Git Sync</h3>
+        <p>A documentation site on the free Learn2 theme, with built-in search and RSS/Atom feeds.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-learn2-git-sync/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#learn2-with-git-sync-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <p data-md>All four share the same open, portable Markdown files, a browser-based Admin panel, and optional Git Sync for version-controlled collaboration.</p>
+    <p data-md>There's also the [Git Page Link Plugin](https://github.com/hibbitts-design/grav-plugin-git-page-link), which works with any Grav theme, not just these four. It adds an "Edit this Page" link back to the Markdown source, for open authoring and community contribution.</p>
+    <p data-md>Want a modern premium theme instead? See [Grav Helios Course Hub and Open Reader](index.html#projects) on the homepage.</p>
+    <p class="grav-cta" data-md>Need help with setup or customization? [Contact me](contact.html), or see [Services](services.html) for professional support options.</p>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p data-md>Built by Paul Hibbitts. All projects are open source and MIT licensed. If one is useful to you, a GitHub star helps someone else find it. There are more fully open-source [Grav projects](grav-projects.html) too. Questions or need help? [Get in touch](contact.html) &ndash; or see [Services](services.html) for professional support options.</p>
+    <div class="flinks">
+      <a href="https://www.hibbittsdesign.org" target="_blank" rel="noopener">HibbittsDesign.org</a>
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+<!-- Renders the page's prose (data-md elements) as Markdown — see
+     assets/markdown/md-render.js for how this works. -->
+<script src="assets/markdown/marked.min.js"></script>
+<script src="assets/markdown/md-render.js"></script>
+</body>
+</html>
