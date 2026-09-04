@@ -505,6 +505,15 @@ a.badge:focus-visible{filter:brightness(0.94);}
    .service-grid above, each with a short description and a Demo/Download/GitHub
    links row (reuses .links/.cta from the project cards higher up the site). */
 .grav-projects{margin:70px 0 0;}
+/* "which one do I need?" guide — plain dash-marker list (mirrors .feat-list's
+   marker style at this page's smaller text scale), placed above the grid so
+   visitors can self-select before reading all four cards. */
+.grav-picker{margin:0 0 48px;}
+.grav-picker h2{font-size:1.3rem; margin:0 0 14px;}
+.grav-picker-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+.grav-picker-list li{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; padding-left:18px; position:relative;}
+.grav-picker-list li::before{content:"\2013"; position:absolute; left:0; top:0; color:var(--ink-faint);}
+.grav-picker-list strong{color:var(--ink); font-weight:600;}
 .grav-grid{
   display:grid; grid-template-columns:1fr 1fr; gap:40px 56px;
 }
