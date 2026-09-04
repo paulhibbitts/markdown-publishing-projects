@@ -463,6 +463,14 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .more-foot a:hover,
 .more-foot a:focus-visible{text-decoration:underline;}
 
+/* contact page — Tally form embed, placed directly on the page (no card
+   border/background) so it reads as part of the page's own open layout
+   rather than a boxed-in module. The iframe still renders on Tally's own
+   white background (no transparentBackground param), which is what keeps
+   its field text legible in dark mode — just without a frame around it. */
+.tally-embed{margin:56px 0 10px;}
+.tally-embed iframe{display:block; width:100%; border:0;}
+
 /* footer */
 footer{
   margin-top:100px;
@@ -475,7 +483,7 @@ footer{
   gap:14px;
 }
 footer p{font-size:var(--text-min); color:var(--ink-faint); margin:0;}
-footer .flinks{display:flex; gap:22px;}
+footer .flinks{display:flex; flex-wrap:wrap; gap:14px 22px;}
 footer .flinks a{font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
 footer .flinks a:hover,
 footer .flinks a:focus-visible{color:var(--teal);}

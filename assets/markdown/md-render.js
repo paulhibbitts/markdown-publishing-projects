@@ -33,13 +33,23 @@
  *
  * CUSTOMIZING LINK OUTPUT
  * ------------------------
- * The block below tells marked.js how to render every link on the page:
- * external links (anything not starting with "#") automatically get
- * target="_blank" rel="noopener", and https:// links get one CSS class
- * applied so they can be styled distinctly from in-page anchors. Change or
- * delete EXTERNAL_LINK_CLASS, or the attributes below, to match your own
- * site's link conventions — this is the only project-specific part of this
- * file; everything else is generic.
+ * The block below tells marked.js how to render every link on the page,
+ * based on what kind of href it is:
+ *   - In-page anchors (#section)       — plain <a>, no class, no target.
+ *   - http(s):// links                 — open in a new tab (target="_blank"
+ *                                         rel="noopener") and get one CSS
+ *                                         class, so they can be styled
+ *                                         distinctly from in-page anchors.
+ *   - mailto: links                    — get the same CSS class (they leave
+ *                                         the page like any external link)
+ *                                         but no target="_blank", which would
+ *                                         just leave a stray blank tab behind.
+ *   - anything else (a relative path,  — treated as another page on this same
+ *     e.g. "contact.html")               site: same CSS class, navigates in
+ *                                         place, no target="_blank" either.
+ * Change or delete EXTERNAL_LINK_CLASS, or the logic below, to match your
+ * own site's link conventions — this is the only project-specific part of
+ * this file; everything else is generic.
  */
 (function () {
   var EXTERNAL_LINK_CLASS = 'tlink'; // set to '' to skip adding a class
@@ -49,10 +59,18 @@
       link: function (token) {
         var href = token.href;
         var text = this.parser.parseInline(token.tokens);
-        var isExternal = href.indexOf('#') !== 0;
+        var isHash = href.indexOf('#') === 0;
+        var isMailto = /^mailto:/.test(href);
         var isHttp = /^https?:\/\//.test(href);
-        var attrs = isExternal ? ' target="_blank" rel="noopener"' : '';
-        var cls = isHttp && EXTERNAL_LINK_CLASS ? ' class="' + EXTERNAL_LINK_CLASS + '"' : '';
+        // Anything left (no #, no mailto:, no http(s):) is a relative link to
+        // another page on this same site — it navigates in place, not a new tab.
+        var isRelative = !isHash && !isMailto && !isHttp;
+        // mailto: and same-site links leave the current page context like any
+        // external link, so they get the same styling class — but only http(s)
+        // links get target="_blank": a mailto opening a stray blank tab, or an
+        // in-site page opening a needless new one, are both just noise.
+        var attrs = isHttp ? ' target="_blank" rel="noopener"' : '';
+        var cls = (isHttp || isMailto || isRelative) && EXTERNAL_LINK_CLASS ? ' class="' + EXTERNAL_LINK_CLASS + '"' : '';
         return '<a href="' + href + '"' + cls + attrs + '>' + text + '</a>';
       }
     }
