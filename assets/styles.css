@@ -517,7 +517,8 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .grav-grid{
   display:grid; grid-template-columns:1fr 1fr; gap:40px 56px;
 }
-.grav-card h3{font-size:1.28rem; font-weight:700; letter-spacing:-0.01em; margin:0 0 10px;}
+.grav-card h3{font-size:1.28rem; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px;}
+.grav-card .badge-row{margin:0 0 10px;}
 .grav-card p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:0 0 16px;}
 .grav-card .links{gap:10px;}
 .grav-projects>p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:22px 0 0; max-width:70ch;}
