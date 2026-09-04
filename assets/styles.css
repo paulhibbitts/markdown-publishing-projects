@@ -103,6 +103,12 @@ button:focus-visible,
   padding:22px 0;
   border-bottom:1px solid var(--line);
 }
+/* .brand-line wraps the clickable .brand (logo + "projects.HibbittsDesign.org")
+   together with an optional, non-clickable .brand-suffix (" / contact",
+   " / services") so only the domain text itself is a link — the current-page
+   suffix is styled to match but does not navigate. On the homepage there's
+   no suffix, so .brand-line just holds the single link. */
+.brand-line{display:inline-flex; align-items:center;}
 .brand{
   display:inline-flex;
   align-items:center;
@@ -116,6 +122,29 @@ button:focus-visible,
 }
 .brand-mark{height:22px; width:auto; display:block;}
 .brand strong{color:var(--ink); font-weight:700;}
+.brand:hover,
+.brand:focus-visible{color:var(--teal);}
+.brand:hover strong,
+.brand:focus-visible strong{color:var(--teal);}
+.brand-suffix{
+  /* .brand-suffix is a flex item of .brand-line, so a leading space in its
+     text content gets collapsed by the browser (whitespace at the start of
+     a flex item's inline content is trimmed) even though the trailing
+     space before "contact"/"services" is preserved. margin-left restores
+     equal spacing on both sides of the "/" instead of relying on a
+     text-node space that the browser would just strip again. */
+  margin-left:1ch;
+  font-family:var(--font-mono);
+  font-size:var(--text-min);
+  font-weight:700;
+  letter-spacing:0.02em;
+  color:var(--ink);
+}
+/* "projects.HibbittsDesign.org" has no spaces, so on very narrow screens
+   the browser has nowhere to wrap it — let it break mid-string as a last
+   resort instead of overflowing the viewport. */
+.brand span{overflow-wrap:anywhere;}
+.brand-suffix{overflow-wrap:anywhere;}
 .site-head nav{display:flex; gap:32px;}
 .site-head nav a{
   font-size:var(--text-min);
@@ -471,6 +500,24 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .tally-embed{margin:56px 0 10px;}
 .tally-embed iframe{display:block; width:100%; border:0;}
 
+/* services page — four parallel offerings, unboxed like the ladder's own
+   "track" of stops: typography and spacing do the separating, rather than
+   bordering each one individually or nesting them inside one big box. */
+.services{margin:70px 0 0;}
+.service-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:40px 56px;
+}
+.service h3{font-size:1.28rem; font-weight:700; letter-spacing:-0.01em; margin:0 0 10px;}
+.service-note{font-size:0.85rem; font-weight:600; color:var(--ink-faint); letter-spacing:0;}
+.service p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:0;}
+.services-cta{
+  margin:56px 0 0;
+  font-size:1.2rem;
+  color:var(--ink-soft);
+  line-height:1.6;
+  max-width:62ch;
+}
+
 /* footer */
 footer{
   margin-top:100px;
@@ -492,6 +539,7 @@ footer .flinks a:focus-visible{color:var(--teal);}
   body{font-size:18px;}
   .site-head{flex-wrap:wrap; gap:14px 0; row-gap:14px;}
   .site-head nav{gap:18px;}
+  .brand-line{flex-wrap:wrap; row-gap:2px;}
   .brand{flex-wrap:wrap; row-gap:2px;}
   .brand strong{white-space:nowrap;}
   .demo{grid-template-columns:1fr;}
@@ -502,6 +550,7 @@ footer .flinks a:focus-visible{color:var(--teal);}
   .track::before{display:none;}
   .project{grid-template-columns:1fr; gap:20px; padding:28px;}
   .kit-grid{grid-template-columns:1fr; gap:26px;}
+  .service-grid{grid-template-columns:1fr; gap:32px;}
   .more{padding:28px;}
   .prow{grid-template-columns:1fr; justify-items:start; gap:10px; padding:20px 24px;}
 }
