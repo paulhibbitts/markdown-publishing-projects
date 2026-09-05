@@ -61,9 +61,14 @@
         var text = this.parser.parseInline(token.tokens);
         var isHash = href.indexOf('#') === 0;
         var isMailto = /^mailto:/.test(href);
-        var isHttp = /^https?:\/\//.test(href);
+        var isSelf = /^https?:\/\/hibbittsdesign\.org/i.test(href);
+        var isHttp = /^https?:\/\//.test(href) && !isSelf;
         // Anything left (no #, no mailto:, no http(s):) is a relative link to
-        // another page on this same site — it navigates in place, not a new tab.
+        // another page on this same site — it navigates in place, not a new
+        // tab. A link written as a full https://hibbittsdesign.org/... URL
+        // (e.g. a home link) is this same site too, just written out in
+        // full, so it gets the same in-place treatment as isHttp is false
+        // for it above.
         var isRelative = !isHash && !isMailto && !isHttp;
         // mailto: and same-site links leave the current page context like any
         // external link, so they get the same styling class — but only http(s)
