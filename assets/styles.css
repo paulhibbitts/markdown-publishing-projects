@@ -584,9 +584,10 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .more-foot a:hover,
 .more-foot a:focus-visible{text-decoration:underline;}
 
-/* homepage — link to the testimonials page, placed right after the four
-   project cards. Same treatment as .more-foot below, just scoped to
-   .projects instead of .more. */
+/* link to the testimonials page (or a specific anchor within it). Used on
+   the homepage, right after the four project cards, and on the Grav
+   projects page, right after the grav-grid. Same treatment as .more-foot
+   below, just scoped to .projects instead of .more. */
 .projects-foot{margin:40px 0 0; font-size:var(--text-min);}
 .projects-foot a{color:var(--teal); font-weight:600; text-decoration:none;}
 .projects-foot a:hover,
