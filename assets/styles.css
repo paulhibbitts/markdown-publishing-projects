@@ -154,6 +154,11 @@ button:focus-visible,
   color:var(--ink-soft);
   max-width:56ch;
 }
+.jump-links{
+  margin:22px 0 0;
+  font-size:var(--text-min);
+  color:var(--ink-faint);
+}
 .hero-rule{
   height:1px;
   background:var(--line);
