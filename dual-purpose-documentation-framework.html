@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a> tags so every link
+     exists in the raw HTML for crawlers and visitors that don't execute
+     JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>A Dual-Purpose Documentation Framework | HibbittsDesign.org</title>
+<meta name="description" content="A practical three-part framework for open-source documentation that keeps your project focused while helping users quickly assess whether it's the right fit.">
+<link rel="canonical" href="https://hibbittsdesign.org/dual-purpose-documentation-framework.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hibbittsdesign.org/dual-purpose-documentation-framework.html">
+<meta property="og:title" content="A Dual-Purpose Documentation Framework | HibbittsDesign.org">
+<meta property="og:description" content="A practical three-part framework for open-source documentation that keeps your project focused while helping users quickly assess whether it's the right fit.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="A Dual-Purpose Documentation Framework | HibbittsDesign.org">
+<meta name="twitter:description" content="A practical three-part framework for open-source documentation that keeps your project focused while helping users quickly assess whether it's the right fit.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ 2. ARTICLE — a documentation framework developed for Docsify-This ============ -->
+  <section class="hero">
+    <h1>A Dual-Purpose Framework for Better Open Source Documentation</h1>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="prose">
+    <p>Working on <a href="https://docsify-this.net/#/" class="tlink" target="_blank" rel="noopener">Docsify-This</a> surfaced a challenge I keep running into with open-source projects: staying focused on the problem you're solving instead of jumping straight to features &ndash; even my own projects need that discipline. Without it, both the project and its documentation end up reflecting the same lack of clarity.</p>
+    <p>There's a better approach. While documenting Docsify-This, I settled on a three-section framework that turned out to serve two purposes at once &ndash; it keeps development focused by anchoring decisions to core principles, and it helps people quickly assess fit before they invest time in setup and learning. Here's how it works.</p>
+
+    <h2 class="sub">What problem does it solve?</h2>
+    <p>Start with the problem and the solution in one or two concise sentences: what the tool does and what it solves, then why it's designed that way. Specificity beats generality &ndash; &ldquo;no web server, website setup, or build process required&rdquo; tells a visitor far more than &ldquo;makes publishing easier.&rdquo; People recognize their own needs in concrete details, not vague promises. Follow it with a short, action-oriented &ldquo;with [your project] you can&hellip;&rdquo; list of five to eight specific capabilities.</p>
+
+    <h2 class="sub">What are its core design principles?</h2>
+    <p>List three to seven short, memorable principles that state your design foundation &ndash; not features, but the commitments behind them. There's a real difference between &ldquo;easy to install and configure&rdquo; and &ldquo;zero setup and maintenance publishing&rdquo;: the second states a philosophical commitment, not just a current feature. For Docsify-This, principles like that give me a quick test for new feature requests &ndash; does it still maintain &ldquo;zero setup&rdquo;? &ndash; and help other people understand why the tool works the way it does, not only what it does.</p>
+
+    <h2 class="sub">When is it a good candidate?</h2>
+    <p>This is where most documentation falls short &ndash; it lists features without helping anyone, maintainer included, understand actual fit. Two contrasting lists close that gap:</p>
+    <ul>
+      <li><strong>Works well when you</strong> want to share the same content across multiple platforms, need to publish quickly without technical setup, or value keeping content in portable, platform-independent files.</li>
+      <li><strong>Other tools might be better when you</strong> need SEO-driven discoverability, complex user management and approval workflows, or a visual page builder rather than Markdown.</li>
+    </ul>
+    <p>That second list is the harder one to write, and the rarer one in open source &ndash; which is exactly why it's worth including. Naming honest limitations builds more trust than overselling capabilities, and it saves everyone time by heading off support requests that were never going to be a good fit.</p>
+
+    <p>Three sections, maybe 500 words, and the same document works as both a development compass and user-facing documentation &ndash; worth revisiting every few months as the project, and your understanding of it, evolves. This framework emerged from documenting <a href="https://docsify-this.net/#/" class="tlink" target="_blank" rel="noopener">Docsify-This</a>, first written up in late 2025; explore the rest of the <a href="https://hibbittsdesign.org/" class="tlink">open-source projects</a> on this site.</p>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support options.</p>
+    <div class="flinks">
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
