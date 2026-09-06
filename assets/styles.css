@@ -106,11 +106,12 @@ button:focus-visible,
 /* .brand-line wraps the clickable .brand (logo + "HibbittsDesign.org").
    Every page just links back home via the domain text — page identity is
    carried by each page's own H1, not a header breadcrumb suffix. */
-.brand-line{display:inline-flex; align-items:center;}
+.brand-line{display:inline-flex; align-items:center; min-width:0;}
 .brand{
   display:inline-flex;
   align-items:center;
   gap:9px;
+  min-width:0;
   font-family:var(--font-mono);
   font-size:var(--text-min);
   font-weight:600;
@@ -124,10 +125,12 @@ button:focus-visible,
 .brand:focus-visible{color:var(--teal);}
 .brand:hover strong,
 .brand:focus-visible strong{color:var(--teal);}
-/* "HibbittsDesign.org" has no spaces, so on very narrow screens
-   the browser has nowhere to wrap it — let it break mid-string as a last
-   resort instead of overflowing the viewport. */
-.brand span{overflow-wrap:anywhere;}
+/* "HibbittsDesign.org" has no spaces of its own, so a <wbr> in the markup
+   (before ".org") gives the browser one deliberate, legible place to wrap
+   it -- min-width:0 lets this flex chain actually shrink enough to use it,
+   instead of overflowing the viewport. overflow-wrap:anywhere stays on as
+   a last-resort fallback for any narrower context the <wbr> alone can't cover. */
+.brand span{min-width:0; overflow-wrap:anywhere;}
 .site-head nav{display:flex; gap:32px;}
 .site-head nav a{
   font-size:var(--text-min);
@@ -145,7 +148,7 @@ button:focus-visible,
   font-size:clamp(2.9rem, 6vw, 4.6rem);
   line-height:1.05;
   letter-spacing:-0.025em;
-  max-width:15ch;
+  max-width:16ch;
 }
 .hero .lede{
   margin:26px 0 0;
