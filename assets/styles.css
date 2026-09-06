@@ -483,6 +483,9 @@ button:focus-visible,
 .project.tk .project-tag{color:var(--teal);}
 .project.am .project-tag{color:var(--amber);}
 .project-head{display:flex; flex-direction:column; align-items:flex-start; gap:14px;}
+/* small screenshot preview under a project's badges — currently used on the two Grav Helios cards only */
+.project-thumb{width:100%; align-self:stretch; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line); line-height:0;}
+.project-thumb img{display:block; width:100%; height:auto;}
 .badge-row{display:flex; flex-wrap:wrap; gap:8px;}
 /* generic badge — mirrors the Grav Helios theme's own badge component (doc-badge): pale fill, pill shape, sans label */
 .badge{
