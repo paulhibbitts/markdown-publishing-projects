@@ -622,7 +622,21 @@ a.badge:focus-visible{filter:brightness(0.94);}
    rather than a boxed-in module. The iframe still renders on Tally's own
    white background (no transparentBackground param), which is what keeps
    its field text legible in dark mode — just without a frame around it. */
-.tally-embed{margin:56px 0 10px;}
+/* Tally's embed always renders with its own light-mode colors (dark text,
+   light inputs) with no way to sync it to a visitor's dark-mode preference,
+   so the colors below are hardcoded to light rather than the --surface/
+   --line tokens above, which flip dark in dark mode. Framing the embed as
+   a deliberate light card keeps it legible in dark mode instead of dark
+   text floating with no backing — the same pattern other sites use for
+   third-party widgets (Calendly, Typeform) that don't support dark mode. */
+.tally-embed{
+  margin:56px 0 10px;
+  background:#ffffff;
+  border:1px solid #e6e5e1;
+  border-radius:var(--radius-xl);
+  padding:20px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+}
 .tally-embed iframe{display:block; width:100%; border:0;}
 
 /* services page — four parallel offerings, unboxed like the ladder's own
