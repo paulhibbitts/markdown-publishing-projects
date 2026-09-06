@@ -1,10 +1,8 @@
 <!doctype html>
 <!-- Developed with the assistance of Claude Code (claude.ai) -->
-<!-- Body copy on this page is written as Markdown, not hand-balanced HTML:
-     any element with a data-md (inline text) or data-md-list (bullet list)
-     attribute has its text content rendered as Markdown on page load by
-     assets/markdown/md-render.js. See that file for how it works and how
-     to reuse it elsewhere. -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -57,8 +55,8 @@
   <!-- ============ 2. SERVICES — heading, intro, four offerings, CTA ============ -->
   <section class="hero">
     <h1>Professional Services &amp; Support</h1>
-    <p class="lede" data-md>While all [HibbittsDesign.org](https://hibbittsdesign.org/) open-source tools are freely available for anyone to use and benefit from, Paul also offers professional services for teams or organizations seeking personalized support. Drawing on experience from over 140 software projects spanning 25 years of professional consulting, these services help create better experiences with open content publishing, offered as availability permits alongside Paul's ongoing open-source work.</p>
-    <p class="lede" data-md>Whether you're looking to streamline your workflows or need custom development, Paul can help open publishers, educators, and creators leverage Markdown more effectively through Docsify, Grav CMS and online learning environments to increase efficiency and collaboration.</p>
+    <p class="lede">While all <a href="https://hibbittsdesign.org/" class="tlink">HibbittsDesign.org</a> open-source tools are freely available for anyone to use and benefit from, Paul also offers professional services for teams or organizations seeking personalized support. Drawing on experience from over 140 software projects spanning 25 years of professional consulting, these services help create better experiences with open content publishing, offered as availability permits alongside Paul's ongoing open-source work.</p>
+    <p class="lede">Whether you're looking to streamline your workflows or need custom development, Paul can help open publishers, educators, and creators leverage Markdown more effectively through Docsify, Grav CMS and online learning environments to increase efficiency and collaboration.</p>
     <hr class="hero-rule">
   </section>
 
@@ -82,7 +80,7 @@
       </div>
     </div>
 
-    <p class="services-cta" data-md>Interested in any of these services? [Contact me](contact.html) and let's explore how we can enhance your digital projects together.</p>
+    <p class="services-cta">Interested in any of these services? <a href="contact.html" class="tlink">Contact me</a> and let's explore how we can enhance your digital projects together.</p>
   </section>
 
   <!-- ============ 3. FOOTER — byline + links ============ -->
@@ -97,9 +95,5 @@
   </footer>
 </div>
 
-<!-- Renders the page's prose (data-md elements) as Markdown — see
-     assets/markdown/md-render.js for how this works. -->
-<script src="assets/markdown/marked.min.js"></script>
-<script src="assets/markdown/md-render.js"></script>
 </body>
 </html>

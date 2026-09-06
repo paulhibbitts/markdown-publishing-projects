@@ -1,10 +1,8 @@
 <!doctype html>
 <!-- Developed with the assistance of Claude Code (claude.ai) -->
-<!-- Body copy on this page is written as Markdown, not hand-balanced HTML:
-     any element with a data-md (inline text) or data-md-list (bullet list)
-     attribute has its text content rendered as Markdown on page load by
-     assets/markdown/md-render.js. See that file for how it works and how
-     to reuse it elsewhere. -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -105,19 +103,19 @@
       <span class="badge plain">PHP 8.3+</span>
     </div>
     <h1>Fully Open-Source Grav Projects</h1>
-    <p class="lede" data-md>[Grav](https://getgrav.org) (15.7k &#9733;s) is a flat-file CMS that stores content as plain Markdown files instead of a database, edited through a browser-based Admin panel, and runs on any standard web host with PHP 8.3+. These four skeletons &ndash; fully open-source, built on the newly released Grav 2 &ndash; cover course hubs, multi-course sites, and open publishing spaces.</p>
-    <p class="lede" data-md>Each shares the same portable Markdown files and optional Git Sync &ndash; Course Hub, MultiCourse Hub, and Publishing Space also support LMS-ready embedding for platforms like Canvas and Moodle.</p>
+    <p class="lede"><a href="https://getgrav.org" class="tlink" target="_blank" rel="noopener">Grav</a> (15.7k &#9733;s) is a flat-file CMS that stores content as plain Markdown files instead of a database, edited through a browser-based Admin panel, and runs on any standard web host with PHP 8.3+. These four skeletons &ndash; fully open-source, built on the newly released Grav 2 &ndash; cover course hubs, multi-course sites, and open publishing spaces.</p>
+    <p class="lede">Each shares the same portable Markdown files and optional Git Sync &ndash; Course Hub, MultiCourse Hub, and Publishing Space also support LMS-ready embedding for platforms like Canvas and Moodle.</p>
     <hr class="hero-rule">
   </section>
 
   <section class="grav-projects">
     <div class="grav-picker">
       <h2>Which one do I need?</h2>
-      <ul class="grav-picker-list" data-md-list>
-        - **Running a single course?** Grav Open Course Hub.
-        - **Running several courses from one site?** Grav Open MultiCourse Hub.
-        - **Publishing collaborative writing, not course content?** Grav Open Publishing Space.
-        - **Publishing documentation, not courses?** Grav Learn2 with Git Sync.
+      <ul class="grav-picker-list">
+        <li><strong>Running a single course?</strong> Grav Open Course Hub.</li>
+        <li><strong>Running several courses from one site?</strong> Grav Open MultiCourse Hub.</li>
+        <li><strong>Publishing collaborative writing, not course content?</strong> Grav Open Publishing Space.</li>
+        <li><strong>Publishing documentation, not courses?</strong> Grav Learn2 with Git Sync.</li>
       </ul>
     </div>
 
@@ -164,13 +162,13 @@
       </div>
     </div>
 
-    <p data-md>All four share the same open, portable Markdown files, a browser-based Admin panel, and optional Git Sync for version-controlled collaboration.</p>
+    <p>All four share the same open, portable Markdown files, a browser-based Admin panel, and optional Git Sync for version-controlled collaboration.</p>
 
     <p class="projects-foot"><a href="testimonials.html#grav-open-course-hub">See what educators are saying about the Grav Open Course Hub &rarr;</a></p>
 
     <div class="grav-plugin">
       <h2>Also Free: Git Page Link Plugin</h2>
-      <p data-md>The [Git Page Link Plugin](https://github.com/hibbitts-design/grav-plugin-git-page-link) works with most Grav themes &ndash; not just these four skeletons. It adds an "Edit this Page" link back to the Markdown source, for open authoring and community contribution.</p>
+      <p>The <a href="https://github.com/hibbitts-design/grav-plugin-git-page-link" class="tlink" target="_blank" rel="noopener">Git Page Link Plugin</a> works with most Grav themes &ndash; not just these four skeletons. It adds an "Edit this Page" link back to the Markdown source, for open authoring and community contribution.</p>
       <div class="links">
         <a class="cta" href="https://demo.hibbittsdesign.org/grav-git-page-link-plugin/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
         <a class="cta plain" href="https://github.com/hibbitts-design/grav-plugin-git-page-link" target="_blank" rel="noopener">GitHub</a>
@@ -190,9 +188,5 @@
   </footer>
 </div>
 
-<!-- Renders the page's prose (data-md elements) as Markdown — see
-     assets/markdown/md-render.js for how this works. -->
-<script src="assets/markdown/marked.min.js"></script>
-<script src="assets/markdown/md-render.js"></script>
 </body>
 </html>

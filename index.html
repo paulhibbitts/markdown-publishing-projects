@@ -1,10 +1,8 @@
 <!doctype html>
 <!-- Developed with the assistance of Claude Code (claude.ai) -->
-<!-- Body copy on this page is written as Markdown, not hand-balanced HTML:
-     any element with a data-md (inline text) or data-md-list (bullet list)
-     attribute has its text content rendered as Markdown on page load by
-     assets/markdown/md-render.js. See that file for how it works and how
-     to reuse it elsewhere. -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -131,14 +129,13 @@
       <span class="badge plain">No Database Required</span>
     </div>
     <h1>Three Ways to Turn Markdown Into a Website</h1>
-    <p class="lede" data-md>No build step, full portability &ndash; pick your level of publishing capability, powered by [Docsify](https://docsify.js.org/) (31.5k &#9733;s) or [Grav](https://getgrav.org/) (15.7k &#9733;s): publish instantly with Docsify-This, launch a site on GitHub Pages with a Docsify Starter Kit, or level up to Grav for a full CMS. Everything here is free and open-source, including the Grav Helios skeletons, which require the paid Premium Helios theme. Built by [Paul Hibbitts](about.html), drawing on over 25 years of software interaction design, UX consulting, and university teaching&nbsp;experience.</p>
+    <p class="lede">No build step, full portability &ndash; pick your level of publishing capability, powered by <a href="https://docsify.js.org/" class="tlink" target="_blank" rel="noopener">Docsify</a> (31.5k &#9733;s) or <a href="https://getgrav.org/" class="tlink" target="_blank" rel="noopener">Grav</a> (15.7k &#9733;s): publish instantly with Docsify-This, launch a site on GitHub Pages with a Docsify Starter Kit, or level up to Grav for a full CMS. Everything here is free and open-source, including the Grav Helios skeletons, which require the paid Premium Helios theme. Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, drawing on over 25 years of software interaction design, UX consulting, and university teaching&nbsp;experience.</p>
     <p class="jump-links">Jump to: <a href="#toolkit" class="tlink">Three Levels of Capability</a> &middot; <a href="#projects" class="tlink">Projects in Detail</a></p>
     <hr class="hero-rule">
 
     <!-- Sample markdown source (left, illustrative, not tied to a real file) and
-         its actual rendered output (right) — the right pane carries data-md /
-         data-md-list too, so it's genuinely produced by md-render.js on page
-         load, the same as every other card body on this page. -->
+         its hand-written HTML equivalent (right), shown side by side purely
+         to illustrate what publishing a Markdown file looks like. -->
     <div class="chrome">
       <div class="chrome-bar">
         <div class="chrome-dots"><span></span><span></span><span></span></div>
@@ -164,13 +161,13 @@ Turn any Markdown file into a
         <div class="demo-pane rendered">
           <p class="pane-label">Published page</p>
           <p class="demo-title">Docsify&#8209;This</p>
-          <p class="demo-body" data-md>Turn any Markdown file into a **shareable, styled web page** &ndash; instantly.</p>
-          <ul data-md-list>
-            - No signup, no install
-            - Embeds in Canvas, Moodle, WordPress, or any page
-            - Point-and-click page builder
+          <p class="demo-body">Turn any Markdown file into a <strong>shareable, styled web page</strong> &ndash; instantly.</p>
+          <ul>
+            <li>No signup, no install</li>
+            <li>Embeds in Canvas, Moodle, WordPress, or any page</li>
+            <li>Point-and-click page builder</li>
           </ul>
-          <p class="demo-link" data-md>[Try it live &rarr;](https://docsify-this.net)</p>
+          <p class="demo-link"><a href="https://docsify-this.net" class="tlink" target="_blank" rel="noopener">Try it live &rarr;</a></p>
         </div>
       </div>
     </div>
@@ -187,21 +184,21 @@ Turn any Markdown file into a
         <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-bolt"/></svg></div>
         <p class="label">Instant &middot; <a href="https://docsify.js.org" target="_blank" rel="noopener">Docsify</a></p>
         <h3>Docsify-This</h3>
-        <p data-md>Point at a file, published instantly, nothing installed</p>
+        <p>Point at a file, published instantly, nothing installed</p>
       </div>
       <!-- Category 2: Docsify Starter Kits -->
       <div class="stop tk">
         <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-sidebar"/></svg></div>
         <p class="label">Static Site &middot; <a href="https://docsify.js.org" target="_blank" rel="noopener">Docsify</a></p>
         <h3>Docsify Starter Kits</h3>
-        <p data-md>A whole repository, your own domain and CSS, zero build step</p>
+        <p>A whole repository, your own domain and CSS, zero build step</p>
       </div>
       <!-- Category 3: Grav Helios (Course Hub & Open Reader) -->
       <div class="stop am">
         <div class="marker" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 6l8 0"/><path d="M16 6l4 0"/><path d="M6 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 12l2 0"/><path d="M10 12l10 0"/><path d="M15 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 18l11 0"/><path d="M19 18l1 0"/></svg></div>
         <p class="label">Full CMS &middot; <a href="https://getgrav.org" target="_blank" rel="noopener">Grav</a> Helios</p>
         <h3>Course Hub &amp; Open Reader</h3>
-        <p data-md>A flat-file CMS (Grav) with a full admin panel, no database required</p>
+        <p>A flat-file CMS (Grav) with a full admin panel, no database required</p>
       </div>
     </div>
   </section>
@@ -210,19 +207,19 @@ Turn any Markdown file into a
   <section class="picker">
     <h2>Which one do I need?</h2>
     <div class="prow">
-      <p class="q" data-md>**I want to publish a page – or several – right now,** with no setup and nothing to install.</p>
+      <p class="q"><strong>I want to publish a page – or several – right now,</strong> with no setup and nothing to install.</p>
       <span class="a tk">Docsify&#8209;This</span>
     </div>
     <div class="prow">
-      <p class="q" data-md>**I want my own domain or custom CSS,** with a whole site living in my own GitHub repository (no coding needed), deployed to GitHub Pages for free.</p>
+      <p class="q"><strong>I want my own domain or custom CSS,</strong> with a whole site living in my own GitHub repository (no coding needed), deployed to GitHub Pages for free.</p>
       <span class="a tk">Docsify Starter Kits</span>
     </div>
     <div class="prow">
-      <p class="q" data-md>**I'm building a single or multiple course site** and want to manage it all from one admin panel.</p>
+      <p class="q"><strong>I'm building a single or multiple course site</strong> and want to manage it all from one admin panel.</p>
       <span class="a am">Grav Helios Course Hub</span>
     </div>
     <div class="prow">
-      <p class="q" data-md>**I'm publishing an open textbook or other long-form OER** and want a web-first reader experience, no database required.</p>
+      <p class="q"><strong>I'm publishing an open textbook or other long-form OER</strong> and want a web-first reader experience, no database required.</p>
       <span class="a am">Grav Helios Open Reader</span>
     </div>
   </section>
@@ -243,14 +240,14 @@ Turn any Markdown file into a
       </div>
       <div class="project-body">
         <h3>Docsify&#8209;This <span class="version-tag">v2.0 &middot; Docsify v5</span></h3>
-        <p data-md>Turn any online Markdown file into a shareable, styled web page or embeddable widget – instantly, with no signup and no build step. Point it at a file on GitHub, Codeberg, or anywhere public, and it's a live page; point it at several, and it's a full multi-page site with sidebar navigation built in. Edit on GitHub's website, or sync local edits automatically with the free [GitHub Desktop](https://desktop.github.com/) app &ndash; either way, the live page updates as soon as you save. Open Infrastructure Finalist, 2024 Open Education Awards for Excellence.</p>
-        <ul class="feat-list" data-md-list>
-          - No signup, no install
-          - Embeds in Canvas, Moodle, WordPress, or any page
-          - Point-and-click page builder
-          - Free [Cartridge Converter](https://docsify-common-cartridge-converter.hibbittsdesign.org/) imports Canvas, Moodle & Brightspace courses (beta)
-          - Full-text search across multi-page sites
-          - Rich content: H5P, LaTeX, Mermaid diagrams & more
+        <p>Turn any online Markdown file into a shareable, styled web page or embeddable widget – instantly, with no signup and no build step. Point it at a file on GitHub, Codeberg, or anywhere public, and it's a live page; point it at several, and it's a full multi-page site with sidebar navigation built in. Edit on GitHub's website, or sync local edits automatically with the free <a href="https://desktop.github.com/" class="tlink" target="_blank" rel="noopener">GitHub Desktop</a> app &ndash; either way, the live page updates as soon as you save. Open Infrastructure Finalist, 2024 Open Education Awards for Excellence.</p>
+        <ul class="feat-list">
+          <li>No signup, no install</li>
+          <li>Embeds in Canvas, Moodle, WordPress, or any page</li>
+          <li>Point-and-click page builder</li>
+          <li>Free <a href="https://docsify-common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
+          <li>Full-text search across multi-page sites</li>
+          <li>Rich content: H5P, LaTeX, Mermaid diagrams &amp; more</li>
         </ul>
         <div class="links">
           <a class="cta green" href="https://docsify-this.net" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it live</a>
@@ -267,13 +264,13 @@ Turn any Markdown file into a
       </div>
       <div class="project-body">
         <h3>Docsify Starter Kits <span class="version-tag">Docsify v5</span></h3>
-        <p data-md>Ready-to-use templates for building a full Markdown-based site on GitHub Pages (free hosting), with room for your own domain and full control over the CSS – no build tooling, edit pages directly on GitHub.</p>
-        <ul class="feat-list" data-md-list>
-          - Your own domain & CSS support
-          - Pre-styled cards, accordions, badges, banners & video embeds included
-          - Embeds in Canvas, Moodle, Microsoft Teams, or any page
-          - Free [Cartridge Converter](https://docsify-common-cartridge-converter.hibbittsdesign.org/) imports Canvas, Moodle & Brightspace courses (beta)
-          - Edit-on-GitHub workflow, or sync local edits with [GitHub Desktop](https://desktop.github.com/) &ndash; no coding required, just text files
+        <p>Ready-to-use templates for building a full Markdown-based site on GitHub Pages (free hosting), with room for your own domain and full control over the CSS – no build tooling, edit pages directly on GitHub.</p>
+        <ul class="feat-list">
+          <li>Your own domain &amp; CSS support</li>
+          <li>Pre-styled cards, accordions, badges, banners &amp; video embeds included</li>
+          <li>Embeds in Canvas, Moodle, Microsoft Teams, or any page</li>
+          <li>Free <a href="https://docsify-common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
+          <li>Edit-on-GitHub workflow, or sync local edits with <a href="https://desktop.github.com/" class="tlink" target="_blank" rel="noopener">GitHub Desktop</a> &ndash; no coding required, just text files</li>
         </ul>
         <div class="kit-grid">
           <div class="kit">
@@ -319,14 +316,14 @@ Turn any Markdown file into a
       </div>
       <div class="project-body">
         <h3>Grav Helios Course Hub <span class="version-tag">Grav 2 CMS</span></h3>
-        <p data-md>A single- or multi-course hub skeleton for the [Grav Premium Helios theme](https://getgrav.org/premium/helios) ($50), for educators who want a real course platform without a database. Includes example course content, the Helios Course Hub plugin, and an admin panel for managing everything through the browser.</p>
-        <ul class="feat-list" data-md-list>
-          - Single or multi-course, with course cards, instructor names & status badges
-          - Course-aware search and an auto-generated topics index
-          - Embeds directly in Canvas, Moodle & Brightspace &ndash; no special integration needed
-          - Free [Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) imports Canvas, Moodle & Brightspace courses (beta)
-          - Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+
-          - Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel
+        <p>A single- or multi-course hub skeleton for the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50), for educators who want a real course platform without a database. Includes example course content, the Helios Course Hub plugin, and an admin panel for managing everything through the browser.</p>
+        <ul class="feat-list">
+          <li>Single or multi-course, with course cards, instructor names &amp; status badges</li>
+          <li>Course-aware search and an auto-generated topics index</li>
+          <li>Embeds directly in Canvas, Moodle &amp; Brightspace &ndash; no special integration needed</li>
+          <li>Free <a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
+          <li>Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+</li>
+          <li>Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel</li>
         </ul>
         <div class="links">
           <a class="cta am" href="https://learn.hibbittsdesign.org" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
@@ -345,14 +342,14 @@ Turn any Markdown file into a
       </div>
       <div class="project-body">
         <h3>Grav Helios Open Reader <span class="version-tag">Grav 2 CMS</span></h3>
-        <p data-md>A web-first reader skeleton for open textbooks and other long-form OER, built on the database-free Grav CMS and the [Grav Premium Helios theme](https://getgrav.org/premium/helios) ($50). Includes example reader content, the Helios Open Reader plugin, and a full admin panel – content still lives as ordinary Markdown files, not database rows.</p>
-        <ul class="feat-list" data-md-list>
-          - "Keep My Place" reading position, a progress bar & a table of contents that highlights where you are
-          - Full-text search, no-code callout blocks like Key Takeaways, plus an optional plain-text version for AI tools to read
-          - Embeds directly in Canvas, Moodle & Brightspace &ndash; no special integration needed
-          - Free [Pressbooks Converter](https://pressbooks-converter.hibbittsdesign.org/) imports your existing content (beta)
-          - Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+
-          - Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel
+        <p>A web-first reader skeleton for open textbooks and other long-form OER, built on the database-free Grav CMS and the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> ($50). Includes example reader content, the Helios Open Reader plugin, and a full admin panel – content still lives as ordinary Markdown files, not database rows.</p>
+        <ul class="feat-list">
+          <li>"Keep My Place" reading position, a progress bar &amp; a table of contents that highlights where you are</li>
+          <li>Full-text search, no-code callout blocks like Key Takeaways, plus an optional plain-text version for AI tools to read</li>
+          <li>Embeds directly in Canvas, Moodle &amp; Brightspace &ndash; no special integration needed</li>
+          <li>Free <a href="https://pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> imports your existing content (beta)</li>
+          <li>Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+</li>
+          <li>Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel</li>
         </ul>
         <div class="links">
           <a class="cta am" href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
@@ -370,8 +367,8 @@ Turn any Markdown file into a
   <section class="more">
     <div class="badge-row more-badge"><span class="badge green">Free &amp; Open Source</span></div>
     <h2>A Cost-Free Way to Use Grav CMS</h2>
-    <p data-md>Course Hub and Open Reader both build on the paid [Grav Premium Helios theme](https://getgrav.org/premium/helios) – a purchase that directly funds continued development of the open-source Grav CMS itself.</p>
-    <p data-md>If you're looking for a completely free way to use Grav instead, these skeletons share the same Markdown-and-Git-Sync workflow and browser-based admin panel. They come with example content already in place, so you're editing rather than starting from a blank site. All four are built on free, open-source themes and the newly released Grav 2, which needs a web host running PHP 8.3+. There's also one more free plugin that pairs with any Grav site, skeleton or not. The two course hub skeletons below also have an upgrade path into the paid Course Hub above, if you outgrow them:</p>
+    <p>Course Hub and Open Reader both build on the paid <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> – a purchase that directly funds continued development of the open-source Grav CMS itself.</p>
+    <p>If you're looking for a completely free way to use Grav instead, these skeletons share the same Markdown-and-Git-Sync workflow and browser-based admin panel. They come with example content already in place, so you're editing rather than starting from a blank site. All four are built on free, open-source themes and the newly released Grav 2, which needs a web host running PHP 8.3+. There's also one more free plugin that pairs with any Grav site, skeleton or not. The two course hub skeletons below also have an upgrade path into the paid Course Hub above, if you outgrow them:</p>
     <ul class="more-list">
       <li><a href="https://github.com/hibbitts-design/grav-skeleton-course-hub" target="_blank" rel="noopener">Open Course Hub</a><span>&ndash; a single-course hub with weekly module navigation</span></li>
       <li><a href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub" target="_blank" rel="noopener">Open MultiCourse Hub</a><span>&ndash; the same, plus a top-level course-selection layer for managing several courses</span></li>
@@ -394,13 +391,5 @@ Turn any Markdown file into a
   </footer>
 </div>
 
-<!-- Renders the page's prose (data-md / data-md-list elements) as Markdown.
-     Both files live in assets/markdown/, kept separate from the rest of
-     assets/ so the whole folder can be copied into another project as-is.
-     marked.min.js is the unmodified library (https://github.com/markedjs/marked);
-     md-render.js is the small, reusable adapter that wires it to this page —
-     see md-render.js for how to reuse this approach elsewhere. -->
-<script src="assets/markdown/marked.min.js"></script>
-<script src="assets/markdown/md-render.js"></script>
 </body>
 </html>
