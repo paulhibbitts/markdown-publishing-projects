@@ -103,7 +103,7 @@ button:focus-visible,
   padding:22px 0;
   border-bottom:1px solid var(--line);
 }
-/* .brand-line wraps the clickable .brand (logo + "projects.HibbittsDesign.org").
+/* .brand-line wraps the clickable .brand (logo + "HibbittsDesign.org").
    Every page just links back home via the domain text — page identity is
    carried by each page's own H1, not a header breadcrumb suffix. */
 .brand-line{display:inline-flex; align-items:center;}
@@ -124,7 +124,7 @@ button:focus-visible,
 .brand:focus-visible{color:var(--teal);}
 .brand:hover strong,
 .brand:focus-visible strong{color:var(--teal);}
-/* "projects.HibbittsDesign.org" has no spaces, so on very narrow screens
+/* "HibbittsDesign.org" has no spaces, so on very narrow screens
    the browser has nowhere to wrap it — let it break mid-string as a last
    resort instead of overflowing the viewport. */
 .brand span{overflow-wrap:anywhere;}
