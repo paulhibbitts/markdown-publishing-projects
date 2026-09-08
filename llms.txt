@@ -27,6 +27,7 @@ All projects are free, open-source, and MIT licensed; none require a database. T
 
 ## Articles
 
+- [Systems-Oriented Design in Practice: The Structure Beneath the Surface](https://hibbittsdesign.org/systems-oriented-design.html): Paul's systems-oriented design approach, illustrated through structural and architectural lessons from building Docsify-This and the Grav Helios Course Hub.
 - [Building Open Source Projects with a Positive Vibe: 8 Practical Guidelines](https://hibbittsdesign.org/open-source-with-a-positive-vibe.html): Paul's philosophy on fostering emotional connection and community in open-source projects, developed while building Docsify-This.
 - [A Dual-Purpose Framework for Better Open Source Documentation](https://hibbittsdesign.org/dual-purpose-documentation-framework.html): A three-part documentation framework (problem/solution, design principles, good-fit vs. not-a-good-fit) that doubles as a development compass.
 
