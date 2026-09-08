@@ -208,6 +208,38 @@ button:focus-visible,
   color:var(--ink);
   font-weight:600;
 }
+/* systems-oriented-design.html — nine design principles. Same "unboxed"
+   philosophy as the testimonials/service/grav grids (no card border): a
+   numbered marker in the mono font, echoing the article's own <code>
+   parameters, gives each principle a distinct beat instead of a plain
+   bullet dot, with extra vertical rhythm between items. */
+.prose ul.principles{
+  list-style:none;
+  padding-left:0;
+  gap:18px;
+  counter-reset:principle;
+}
+.prose ul.principles li{
+  position:relative;
+  padding-left:38px;
+}
+.prose ul.principles li::before{
+  counter-increment:principle;
+  content:counter(principle);
+  position:absolute;
+  left:0;
+  top:1px;
+  width:24px;
+  height:24px;
+  line-height:24px;
+  text-align:center;
+  border-radius:var(--radius-pill);
+  background:var(--teal-soft);
+  color:var(--teal);
+  font-family:var(--font-mono);
+  font-size:0.8rem;
+  font-weight:700;
+}
 .hero-bio{
   display:flex;
   gap:36px;
