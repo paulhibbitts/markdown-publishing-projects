@@ -1,0 +1,38 @@
+# HibbittsDesign.org
+
+> Open-source Docsify and Grav publishing tools that turn Markdown files into websites, from instant single-page publishing to a full flat-file CMS. Built by Paul Hibbitts for educators, digital publishers, and content creators.
+
+All projects are free, open-source, and MIT licensed; none require a database. They form three levels of publishing capability, from least to most setup: publish instantly with Docsify-This, launch a static site with a Docsify Starter Kit, or run a full CMS with Grav Helios (Course Hub or Open Reader). Content in every option stays as plain, portable Markdown files. Paul draws on 25+ years of software interaction design, UX consulting, and university teaching experience; see About Paul below for background and open-source philosophy.
+
+## Main Pages
+
+- [Home](https://hibbittsdesign.org/): Overview of the four core projects and the three-level publishing model, with a live before/after Markdown demo.
+- [About Paul](https://hibbittsdesign.org/about.html): Background, teaching history (SFU CMPT-363), the Learning + Technology Development Process Model, and open-source design philosophy.
+- [Services](https://hibbittsdesign.org/services.html): Optional paid professional services — workflow/UX optimization, priority support, tutorials and workshops, custom Docsify/Grav development.
+- [Testimonials](https://hibbittsdesign.org/testimonials.html): Feedback from educators, publishers, and open-source users of Docsify-This, the Docsify Starter Kits, and the Grav Open Course Hub.
+- [Fully Open-Source Grav Projects](https://hibbittsdesign.org/fully-open-source-grav-projects.html): Four free Grav 2 skeletons that don't require the paid Helios theme, plus the free Git Page Link plugin.
+- [Contact](https://hibbittsdesign.org/contact.html): Email address and contact form.
+
+## Projects
+
+- [Docsify-This](https://docsify-this.net/): Instantly turn any online Markdown file into a shareable, styled web page or embeddable widget — no signup, no build step. Source: https://github.com/hibbitts-design/docsify-this
+- [Docsify Starter Kits](https://github.com/hibbitts-design/docsify-open-publishing-starter-kit): Ready-to-use GitHub Pages templates (Open Course Kit, Open MultiCourse Kit, Open Publishing Kit) for a full Markdown-based site with a custom domain and CSS, no build tooling.
+- [Grav Helios Course Hub](https://demo.hibbittsdesign.org/grav-helios-course-hub/): Single- or multi-course hub CMS built on Grav and the paid Grav Premium Helios theme, with a browser-based admin panel. Source: https://github.com/hibbitts-design/grav-skeleton-helios-course-hub
+- [Grav Helios Open Reader](https://demo.hibbittsdesign.org/grav-helios-open-reader/): Web-first reader platform for open textbooks and OER, built on Grav and the paid Grav Premium Helios theme. Source: https://github.com/hibbitts-design/grav-skeleton-helios-open-reader
+- [Grav Open Course Hub](https://demo.hibbittsdesign.org/grav-open-course-hub): Free single-course hub skeleton with weekly module navigation. Source: https://github.com/hibbitts-design/grav-skeleton-course-hub
+- [Grav Open MultiCourse Hub](https://demo.hibbittsdesign.org/grav-open-multi-course-hub): Free multi-course hub skeleton with a course-selection layer. Source: https://github.com/hibbitts-design/grav-skeleton-multicourse-hub
+- [Grav Open Publishing Space](https://demo.hibbittsdesign.org/grav-open-publishing-quark/): Free collaborative Markdown publishing skeleton on the Quark theme, for writers and publishers rather than courses. Source: https://github.com/hibbitts-design/grav-skeleton-open-publishing-space
+- [Grav Learn2 with Git Sync](https://demo.hibbittsdesign.org/grav-learn2-git-sync/): Free documentation-site skeleton with search and RSS/Atom feeds. Source: https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync
+- [Git Page Link Plugin](https://github.com/hibbitts-design/grav-plugin-git-page-link): Free plugin that adds an "Edit this Page" link back to the Markdown source, works with most Grav themes.
+
+## Articles
+
+- [Building Open Source Projects with a Positive Vibe: 8 Practical Guidelines](https://hibbittsdesign.org/open-source-with-a-positive-vibe.html): Paul's philosophy on fostering emotional connection and community in open-source projects, developed while building Docsify-This.
+- [A Dual-Purpose Framework for Better Open Source Documentation](https://hibbittsdesign.org/dual-purpose-documentation-framework.html): A three-part documentation framework (problem/solution, design principles, good-fit vs. not-a-good-fit) that doubles as a development compass.
+
+## Optional
+
+- [GitHub](https://github.com/hibbitts-design): All source repositories.
+- [Mastodon](https://mastodon.social/@hibbittsdesign)
+- [Bluesky](https://bsky.app/profile/hibbittsdesign.org)
+- [LinkedIn](https://ca.linkedin.com/in/paulhibbitts)
