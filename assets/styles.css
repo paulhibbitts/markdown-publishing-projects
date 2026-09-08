@@ -291,24 +291,48 @@ button:focus-visible,
 }
 /* testimonials page — quotes grouped by project. Unboxed like the site's
    other grids (.service-grid, .grav-grid): a left rule marks each quote
-   instead of a bordered card. */
+   instead of a bordered card. Each group carries the same project-family
+   accent already used on the homepage ladder/badges (.tk teal for the
+   Docsify family, .green for the free Grav skeletons) so a reader can tell
+   at a glance which product a quote belongs to, and each quote gets a
+   quiet oversized quotation mark in that same accent rather than any new
+   card styling. */
 .testi-group{
   margin:32px 0 0;
 }
 .testi-group:first-of-type{
   margin-top:24px;
 }
+.testi-group.tk h2.sub{color:var(--teal);}
+.testi-group.green h2.sub{color:var(--green);}
 .testi-grid{
   column-count:2;
   column-gap:40px;
   margin-top:14px;
 }
 .testi{
+  position:relative;
   margin:0 0 24px;
-  padding-left:18px;
+  padding:24px 0 0 18px;
   border-left:2px solid var(--line);
   break-inside:avoid;
 }
+.testi-group.tk .testi{border-left-color:var(--teal);}
+.testi-group.green .testi{border-left-color:var(--green);}
+.testi::before{
+  content:"\201C";
+  position:absolute;
+  left:5px;
+  top:-4px;
+  font-family:var(--font-sans);
+  font-size:2.75rem;
+  font-weight:800;
+  line-height:1;
+  color:var(--ink-faint);
+  opacity:0.35;
+}
+.testi-group.tk .testi::before{color:var(--teal);}
+.testi-group.green .testi::before{color:var(--green);}
 .testi p{
   font-size:var(--text-min);
   color:var(--ink-soft);
