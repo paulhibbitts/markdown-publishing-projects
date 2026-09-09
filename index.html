@@ -103,7 +103,8 @@
        2. HERO                — headline, subhead, markdown-to-published demo
        3. LADDER               — "three levels of capability" step copy
        4. PICKER               — "which one do I need?" Q&A rows
-       5. PROJECT CARDS (x4)   — Docsify-This, Starter Kits, Course Hub, Open Reader
+       5. PROJECT CARDS (x4)   — Docsify-This, Starter Kits, (Docsify Cartridge Converter),
+                                 Course Hub, Open Reader, (Grav Helios Import Converters)
        6. FREE GRAV SKELETONS  — the four no-cost Grav alternatives, plus the Git Page Link plugin
        7. FOOTER               — byline + links
      Search for the "====" banners below to jump to any section. Styling lives
@@ -223,7 +224,8 @@ Turn any Markdown file into a
     </div>
   </section>
 
-  <!-- ============ 5. PROJECT CARDS — Docsify-This, Starter Kits, Course Hub, Open Reader ============ -->
+  <!-- ============ 5. PROJECT CARDS — Docsify-This, Starter Kits, (Docsify Cartridge Converter),
+       Course Hub, Open Reader, (Grav Helios Import Converters) ============ -->
   <section class="projects" id="projects">
     <h2 class="sr-only">Projects</h2>
 
@@ -302,8 +304,9 @@ Turn any Markdown file into a
         </div>
 
         <!-- Customized variation demos -- also usable as their own starting templates,
-             not just examples to look at. Deliberately lighter-weight than .kit-grid
-             above so they read as bonus/supplementary, not a fourth and fifth core kit. -->
+             not just examples to look at. Laid out as a single-row list, deliberately
+             lighter-weight than .kit-grid above, so they read as bonus/supplementary
+             rather than additional core kits. -->
         <div class="kit-examples">
           <p class="kit-examples-label">More Examples: Customized Variations</p>
           <p class="kit-examples-intro">Beyond the three kits above, these demos show further customization on the same foundation &ndash; and each is itself a ready-to-use starting template, not just an example to look at.</p>
@@ -343,6 +346,27 @@ Turn any Markdown file into a
       </div>
     </article>
 
+    <!-- Docsify Cartridge Converter -- closes out the Docsify pair (Docsify-This +
+         Starter Kits) with the import tool that works with either, before moving
+         into the Grav Helios cards. Reuses the .tools row-list pattern from
+         More Examples above, as a div (not section) since it's a sub-block of
+         the projects flex stack, not its own page-level landmark. -->
+    <div class="tools">
+      <div class="badge-row tools-badge"><span class="badge plain">Beta</span></div>
+      <h3>Docsify Cartridge Converter</h3>
+      <div class="tools-list">
+        <div class="tool">
+          <div class="tool-text">
+            <p class="tool-desc">Imports a Canvas, Moodle, or Brightspace Common Cartridge export into a ready-to-edit Docsify site, for use with either Docsify&#8209;This above or the Docsify Starter Kits. It's a free, ongoing beta project &ndash; not a finished product, and likely to stay that way &ndash; but it handles the common cases well; treat the result as a strong starting point to review, not a guaranteed complete migration.</p>
+          </div>
+          <div class="links">
+            <a class="cta tk" href="https://docsify-common-cartridge-converter.hibbittsdesign.org/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it</a>
+            <a class="cta plain" href="https://github.com/paulhibbitts/docsify-common-cartridge-converter" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Card 3: Grav Helios Course Hub -->
     <article class="project am">
       <div class="project-head">
@@ -361,7 +385,7 @@ Turn any Markdown file into a
           <li>Single or multi-course, with course cards, instructor names &amp; status badges</li>
           <li>Course-aware search and an auto-generated topics index</li>
           <li>Embeds directly in Canvas, Moodle &amp; Brightspace &ndash; no special integration needed</li>
-          <li>Free <a href="https://common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
+          <li>Free <a href="https://helios-common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
           <li>Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+</li>
           <li>Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel</li>
         </ul>
@@ -388,7 +412,7 @@ Turn any Markdown file into a
           <li>"Keep My Place" reading position, a progress bar &amp; a table of contents that highlights where you are</li>
           <li>Full-text search, no-code callout blocks like Key Takeaways, plus an optional plain-text version for AI tools to read</li>
           <li>Embeds directly in Canvas, Moodle &amp; Brightspace &ndash; no special integration needed</li>
-          <li>Free <a href="https://pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> imports your existing content (beta)</li>
+          <li>Free <a href="https://helios-pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> imports your existing content (beta)</li>
           <li>Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+</li>
           <li>Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel</li>
         </ul>
@@ -401,6 +425,39 @@ Turn any Markdown file into a
     </article>
 
     <p class="projects-foot"><a href="testimonials.html">See what educators and users are saying &rarr;</a></p>
+
+    <!-- Grav Helios Import Converters -- closes out the Grav Helios pair (Course Hub +
+         Open Reader) the same way the Docsify converter closes out the Docsify pair
+         above, before the free Grav skeletons section. Placed after projects-foot so
+         that link still reads as the direct capstone to the four core product cards,
+         not to this supplementary tools box. -->
+    <div class="tools">
+      <div class="badge-row tools-badge"><span class="badge plain">Beta</span></div>
+      <h3>Grav Helios Import Converters</h3>
+      <p>Free tools that handle the common cases well, but course and book content varies enough that the result is a strong starting point to review and finish by hand, not a guaranteed one&#8209;click migration. Both are ongoing beta projects &ndash; not finished products, and likely to stay that way.</p>
+      <div class="tools-list">
+        <div class="tool">
+          <div class="tool-text">
+            <p class="tool-title">Grav Helios Cartridge Converter</p>
+            <p class="tool-desc">The same Common Cartridge import as the Docsify converter above, built for Course Hub.</p>
+          </div>
+          <div class="links">
+            <a class="cta am" href="https://helios-common-cartridge-converter.hibbittsdesign.org/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it</a>
+            <a class="cta plain" href="https://github.com/paulhibbitts/grav-helios-common-cartridge-converter" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="tool">
+          <div class="tool-text">
+            <p class="tool-title">Grav Helios Pressbooks Converter</p>
+            <p class="tool-desc">Imports existing Pressbooks content into Open Reader.</p>
+          </div>
+          <div class="links">
+            <a class="cta am" href="https://helios-pressbooks-converter.hibbittsdesign.org/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it</a>
+            <a class="cta plain" href="https://github.com/paulhibbitts/grav-helios-pressbooks-converter" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </section>
 

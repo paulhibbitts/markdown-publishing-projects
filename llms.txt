@@ -25,6 +25,14 @@ All projects are free, open-source, and MIT licensed; none require a database. T
 - [Grav Learn2 with Git Sync](https://demo.hibbittsdesign.org/grav-learn2-git-sync/): Free documentation-site skeleton with search and RSS/Atom feeds. Source: https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync
 - [Git Page Link Plugin](https://github.com/hibbitts-design/grav-plugin-git-page-link): Free plugin that adds an "Edit this Page" link back to the Markdown source, works with most Grav themes.
 
+## Import & Conversion Tools
+
+Free, ongoing-beta converters for bringing existing course or book content into these tools. Each handles the common cases well but isn't a guaranteed complete migration.
+
+- [Docsify Cartridge Converter](https://docsify-common-cartridge-converter.hibbittsdesign.org/): Imports a Canvas, Moodle, or Brightspace Common Cartridge export into a ready-to-edit Docsify site, for use with either Docsify-This or the Docsify Starter Kits. Source: https://github.com/paulhibbitts/docsify-common-cartridge-converter
+- [Grav Helios Cartridge Converter](https://helios-common-cartridge-converter.hibbittsdesign.org/): The same Common Cartridge import, built for Grav Helios Course Hub. Source: https://github.com/paulhibbitts/grav-helios-common-cartridge-converter
+- [Grav Helios Pressbooks Converter](https://helios-pressbooks-converter.hibbittsdesign.org/): Imports existing Pressbooks content into Grav Helios Open Reader. Source: https://github.com/paulhibbitts/grav-helios-pressbooks-converter
+
 ## Articles
 
 - [Systems-Oriented Design in Practice: The Structure Beneath the Surface](https://hibbittsdesign.org/systems-oriented-design.html): Paul's systems-oriented design approach, illustrated through structural and architectural lessons from building Docsify-This and the Grav Helios Course Hub.
@@ -33,7 +41,7 @@ All projects are free, open-source, and MIT licensed; none require a database. T
 
 ## Optional
 
-- [GitHub](https://github.com/hibbitts-design): All source repositories.
+- [GitHub](https://github.com/hibbitts-design): Most source repositories (the three import/conversion tools above are under github.com/paulhibbitts instead).
 - [Mastodon](https://mastodon.social/@hibbittsdesign)
 - [Bluesky](https://bsky.app/profile/hibbittsdesign.org)
 - [LinkedIn](https://ca.linkedin.com/in/paulhibbitts)

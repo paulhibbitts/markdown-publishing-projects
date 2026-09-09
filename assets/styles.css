@@ -696,6 +696,38 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .more-foot a:hover,
 .more-foot a:focus-visible{text-decoration:underline;}
 
+/* Import Converters -- two small boxes living as flex children inside .projects
+   (right after the Docsify pair and right after the Grav Helios pair), same
+   bordered-box treatment as .more, with the single-row-per-item list pattern
+   from .kit-examples (title+desc left, links right, thin dividers). Heading is
+   h3, not h2, since these sit among sibling <article> h3s inside .projects
+   rather than being their own top-level page section. */
+.tools{
+  padding:32px 36px;
+  border:1px solid var(--line);
+  border-radius:var(--radius-xl);
+} /* no margin-top here -- .projects already supplies spacing between its flex children via gap */
+.tools-badge{margin:0 0 14px;}
+.tools h3{font-size:1.3rem; margin:0 0 10px;}
+.tools>p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:0 0 22px; max-width:70ch;}
+.tools-list{display:flex; flex-direction:column;}
+.tool{
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+  padding:16px 0; border-bottom:1px solid var(--line);
+}
+.tool:first-child{padding-top:4px;}
+.tool:last-child{border-bottom:none; padding-bottom:0;}
+.tool-text{flex:1; min-width:0;}
+.tool .links{flex-shrink:0;}
+.tool-title{
+  font-family:var(--font-sans); font-size:1rem; font-weight:700;
+  letter-spacing:-0.01em; margin:0 0 4px;
+}
+.tool-desc{
+  font-size:var(--text-min); color:var(--ink-soft); line-height:1.5;
+  margin:0;
+}
+
 /* link to the testimonials page (or a specific anchor within it). Used on
    the homepage, right after the four project cards, and on the Grav
    projects page, right after the grav-grid. Same treatment as .more-foot
@@ -816,5 +848,7 @@ footer .flinks a:focus-visible{color:var(--teal);}
   .grav-grid{grid-template-columns:1fr; gap:32px;}
   .testi-grid{column-count:1;}
   .more{padding:28px;}
+  .tools{padding:28px;}
+  .tool{flex-direction:column; align-items:flex-start; gap:10px;}
   .prow{grid-template-columns:1fr; justify-items:start; gap:10px; padding:20px 24px;}
 }
