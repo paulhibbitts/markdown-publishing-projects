@@ -611,6 +611,38 @@ a.badge:focus-visible{filter:brightness(0.94);}
   margin:0 0 14px;
 }
 .kit .links{gap:10px;}
+/* secondary "customized variation" demos, nested below the three core kits --
+   deliberately lighter-weight than .kit-grid (mono eyebrow label instead of an
+   h4, no star badge) and laid out as a single-row-per-demo list rather than a
+   grid, so they read as a distinct, supplementary list rather than a second
+   set of cards competing with the three primary kit choices above them */
+.kit-examples{margin-top:20px; padding-top:20px; border-top:1px solid var(--line);}
+.kit-examples-label{
+  font-family:var(--font-mono); font-size:0.85rem; letter-spacing:0.04em;
+  text-transform:uppercase; font-weight:700; color:var(--ink-faint);
+  margin:0 0 8px;
+}
+.kit-examples-intro{
+  font-size:var(--text-min); color:var(--ink-soft); line-height:1.5;
+  margin:0 0 16px;
+}
+.kit-examples-list{display:flex; flex-direction:column;}
+.kit-example{
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+  padding:16px 0; border-bottom:1px solid var(--line);
+}
+.kit-example:first-child{padding-top:4px;}
+.kit-example:last-child{border-bottom:none; padding-bottom:0;}
+.kit-example-text{flex:1; min-width:0;}
+.kit-example .links{flex-shrink:0;}
+.kit-example-title{
+  font-family:var(--font-sans); font-size:1rem; font-weight:700;
+  letter-spacing:-0.01em; margin:0 0 4px;
+}
+.kit-example-desc{
+  font-size:var(--text-min); color:var(--ink-soft); line-height:1.5;
+  margin:0;
+}
 .badge.sm{font-size:0.85rem; padding:3px 10px;}
 /* bordered arrow-link boxes, matching the parent site's "→ Try X / View on GitHub" convention */
 .links{display:flex; gap:14px; flex-wrap:wrap;}
@@ -779,6 +811,7 @@ footer .flinks a:focus-visible{color:var(--teal);}
   .track::before{display:none;}
   .project{grid-template-columns:1fr; gap:20px; padding:28px;}
   .kit-grid{grid-template-columns:1fr; gap:26px;}
+  .kit-example{flex-direction:column; align-items:flex-start; gap:10px;}
   .service-grid{grid-template-columns:1fr; gap:32px;}
   .grav-grid{grid-template-columns:1fr; gap:32px;}
   .testi-grid{column-count:1;}
