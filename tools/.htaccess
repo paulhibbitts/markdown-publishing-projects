@@ -1,0 +1,15 @@
+# Block ALL web access to this folder and everything in it. These are
+# local maintenance scripts, not part of the published site -- nothing in
+# here should ever be reachable by URL, browser, or crawler. This applies
+# regardless of filename or subfolder (including partials/), and works
+# whether or not a directory index is present.
+#
+# Covers both Apache 2.4+ (mod_authz_core) and older 2.2-style syntax, so
+# it works without needing to know which Apache version the host runs.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
