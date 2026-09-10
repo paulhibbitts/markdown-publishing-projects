@@ -25,13 +25,18 @@
   --ink-soft:#5c5e5a;
   --ink-faint:#73756f;  /* darkened from #93958f to clear WCAG AA (4.5:1) for the body copy set in this color */
   --line:#e6e5e1;
-  --teal:#3d6f9e;
-  --teal-soft:#eaf1f8;
-  --amber:#b2502f;
-  --amber-soft:#f8ece6;
-  --green:#3f8f52;
-  --green-soft:#e7f3e8;
-  --purple-soft:#e8ecf9;  /* teal-soft nudged toward purple, rather than a standalone hue; used for the picker box background only */
+  /* Product-family accents. Docsify -> green (docsify.js.org's mascot); Grav -> purple
+     (Grav 2's brand). Token names kept as --teal/--amber so existing .tk/.am rules still
+     apply. --link is the brand-neutral interaction color (generic links, nav, focus) that
+     belongs to neither family. */
+  --link:#3d6f9e;
+  --teal:#3f8f52;
+  --teal-soft:#e7f3e8;
+  --amber:#6a5691;
+  --amber-soft:#ede9f4;
+  --green:#6a5691;        /* free Grav skeletons — same family as --amber */
+  --green-soft:#ede9f4;
+  --purple-soft:#f2f0ea;  /* picker box background — a neutral warm tint spanning both families */
   --code-bg:#1c1e1a;
 
   /* type + shape tokens (same in light and dark, so defined once here) */
@@ -52,13 +57,14 @@
     --ink-soft:#b3b5b0;
     --ink-faint:#858785;  /* lightened from #797b76 to clear WCAG AA (4.5:1) for the body copy set in this color */
     --line:#2e3033;
-    --teal:#7fabd6;
-    --teal-soft:#1e2a35;
-    --amber:#d98c67;
-    --amber-soft:#332420;
-    --green:#6fc484;
-    --green-soft:#1e3324;
-    --purple-soft:#1d2436;
+    --link:#7fabd6;
+    --teal:#6fc484;
+    --teal-soft:#1e3324;
+    --amber:#b09bd4;
+    --amber-soft:#2a2340;
+    --green:#b09bd4;
+    --green-soft:#2a2340;
+    --purple-soft:#242427;
     --code-bg:#0e100c;
   }
 }
@@ -92,7 +98,7 @@ a{color:inherit;}
 a:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible{
-  outline:2px solid var(--teal);
+  outline:2px solid var(--link);
   outline-offset:2px;
   border-radius:2px;
 }
@@ -122,9 +128,9 @@ button:focus-visible,
 .brand-mark{height:22px; width:auto; display:block;}
 .brand strong{color:var(--ink); font-weight:700;}
 .brand:hover,
-.brand:focus-visible{color:var(--teal);}
+.brand:focus-visible{color:var(--link);}
 .brand:hover strong,
-.brand:focus-visible strong{color:var(--teal);}
+.brand:focus-visible strong{color:var(--link);}
 /* "HibbittsDesign.org" has no spaces of its own, so a <wbr> in the markup
    (before ".org") gives the browser one deliberate, legible place to wrap
    it -- min-width:0 lets this flex chain actually shrink enough to use it,
@@ -139,7 +145,7 @@ button:focus-visible,
   color:var(--ink-soft);
 }
 .site-head nav a:hover,
-.site-head nav a:focus-visible{color:var(--teal);}
+.site-head nav a:focus-visible{color:var(--link);}
 
 /* hero */
 .hero{padding:76px 0 20px;}
@@ -292,8 +298,9 @@ button:focus-visible,
 /* testimonials page — quotes grouped by project. Unboxed like the site's
    other grids (.service-grid, .grav-grid): a left rule marks each quote
    instead of a bordered card. Each group carries the same project-family
-   accent already used on the homepage ladder/badges (.tk teal for the
-   Docsify family, .green for the free Grav skeletons) so a reader can tell
+   accent already used on the homepage ladder/badges (.tk green for the
+   Docsify family, .green for the free Grav skeletons, which share the Grav
+   purple) so a reader can tell
    at a glance which product a quote belongs to, and each quote gets a
    quiet oversized quotation mark in that same accent rather than any new
    card styling. */
@@ -563,7 +570,7 @@ a.badge:hover,
 a.badge:focus-visible{filter:brightness(0.94);}
 
 /* inline text link within prose, e.g. "the Grav Premium Helios theme" */
-.tlink{color:var(--teal); font-weight:600; text-decoration:none;}
+.tlink{color:var(--link); font-weight:600; text-decoration:none;}
 .tlink:hover,
 .tlink:focus-visible{text-decoration:underline;}
 .project-body h3{font-size:2.3rem; margin-bottom:16px; letter-spacing:-0.025em;}
@@ -689,10 +696,10 @@ a.badge:focus-visible{filter:brightness(0.94);}
   white-space:nowrap;
 }
 .more-list a:hover,
-.more-list a:focus-visible{color:var(--teal); border-color:var(--teal);}
+.more-list a:focus-visible{color:var(--link); border-color:var(--link);}
 .more-list span{font-size:var(--text-min); color:var(--ink-faint);}
 .more>p.more-foot{margin:44px 0 0; font-size:var(--text-min);}
-.more-foot a{color:var(--teal); font-weight:600; text-decoration:none;}
+.more-foot a{color:var(--link); font-weight:600; text-decoration:none;}
 .more-foot a:hover,
 .more-foot a:focus-visible{text-decoration:underline;}
 
@@ -733,7 +740,7 @@ a.badge:focus-visible{filter:brightness(0.94);}
    projects page, right after the grav-grid. Same treatment as .more-foot
    below, just scoped to .projects instead of .more. */
 .projects-foot{margin:40px 0 0; font-size:var(--text-min);}
-.projects-foot a{color:var(--teal); font-weight:600; text-decoration:none;}
+.projects-foot a{color:var(--link); font-weight:600; text-decoration:none;}
 .projects-foot a:hover,
 .projects-foot a:focus-visible{text-decoration:underline;}
 
@@ -827,7 +834,7 @@ footer p{font-size:var(--text-min); color:var(--ink-faint); margin:0;}
 footer .flinks{display:flex; flex-wrap:wrap; gap:14px 22px;}
 footer .flinks a{font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
 footer .flinks a:hover,
-footer .flinks a:focus-visible{color:var(--teal);}
+footer .flinks a:focus-visible{color:var(--link);}
 
 @media (max-width:760px){
   body{font-size:18px;}
