@@ -23,17 +23,20 @@ THE THREE YOU CAN RUN RIGHT AWAY (no extra installs needed)
   python3 tools/verify_all_v2.py
       Checks the whole site for real problems: unbalanced HTML tags,
       broken structured data, sitemap mismatches, broken/misconfigured
-      links, and whether the header/nav and footer are still identical
-      across all nine pages. Prints PASS or FAIL with details.
+      links, and whether the header/nav, footer, and Google Analytics
+      snippet are still identical across all nine pages. Prints PASS or
+      FAIL with details.
 
   python3 tools/sync_boilerplate.py
       If you ever want to change the wording in the site's shared header/
-      nav or footer WITHOUT going through a Claude session: edit
-      tools/partials/header.html or tools/partials/footer.html directly
-      (plain HTML, no special syntax), then run this script from anywhere.
-      It pushes your edit out to all nine live HTML pages automatically
-      and tells you which pages it changed. Run verify_all_v2.py
-      afterward to double-check everything still matches.
+      nav or footer, or update the Google Analytics snippet (e.g. a new
+      tracking ID), WITHOUT going through a Claude session: edit
+      tools/partials/header.html, tools/partials/footer.html, or
+      tools/partials/analytics.html directly (plain HTML, no special
+      syntax), then run this script from anywhere. It pushes your edit
+      out to all nine live HTML pages automatically and tells you which
+      pages it changed. Run verify_all_v2.py afterward to double-check
+      everything still matches.
 
   python3 tools/error_check.py
       A second, independent static check, focused on things

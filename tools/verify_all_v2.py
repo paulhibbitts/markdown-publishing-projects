@@ -147,34 +147,43 @@ else:
     print("No notion.com / notion.site / notion-related hrefs found across all pages. OK")
 
 print("\n=== SHARED BOILERPLATE CONSISTENCY ===")
-# The header/nav block and the footer block are meant to be byte-identical
-# across every page (they're hand-copied, not templated/included). This
-# catches accidental drift early -- e.g. a wording or entity fix applied to
-# one page's footer but missed on another -- rather than relying on someone
-# noticing visually. If a divergence is ever intentional, update PAGES-aware
-# logic here rather than deleting this check.
+# The header/nav block, the footer block, and the Google Analytics snippet
+# are meant to be byte-identical across every page (they're hand-copied, not
+# templated/included). This catches accidental drift early -- e.g. a wording
+# or entity fix applied to one page's footer but missed on another, or a
+# tracking ID update that didn't make it to every page -- rather than
+# relying on someone noticing visually. If a divergence is ever intentional,
+# update PAGES-aware logic here rather than deleting this check.
 header_re = re.compile(r'<header class="site-head">.*?</header>', re.S)
 footer_re = re.compile(r'<footer>.*?</footer>', re.S)
+analytics_re = re.compile(r'<!-- GOOGLE ANALYTICS START.*?GOOGLE ANALYTICS END -->', re.S)
 ref_page = PAGES[0]
 ref_html = open(ref_page, encoding="utf-8").read()
 ref_header_m = header_re.search(ref_html)
 ref_footer_m = footer_re.search(ref_html)
+ref_analytics_m = analytics_re.search(ref_html)
 ref_header = ref_header_m.group(0) if ref_header_m else None
 ref_footer = ref_footer_m.group(0) if ref_footer_m else None
+ref_analytics = ref_analytics_m.group(0) if ref_analytics_m else None
 if ref_header is None:
     all_ok = False
     print(f"{ref_page}: FAIL could not find <header class=\"site-head\"> block")
 if ref_footer is None:
     all_ok = False
     print(f"{ref_page}: FAIL could not find <footer> block")
+if ref_analytics is None:
+    all_ok = False
+    print(f"{ref_page}: FAIL could not find GOOGLE ANALYTICS block")
 
 boilerplate_ok = True
 for p in PAGES:
     html = open(p, encoding="utf-8").read()
     hm = header_re.search(html)
     fm = footer_re.search(html)
+    am = analytics_re.search(html)
     h = hm.group(0) if hm else None
     f = fm.group(0) if fm else None
+    a = am.group(0) if am else None
     if h is None:
         all_ok = False
         boilerplate_ok = False
@@ -191,7 +200,15 @@ for p in PAGES:
         all_ok = False
         boilerplate_ok = False
         print(f"{p}: FAIL footer block differs from {ref_page}")
+    if a is None:
+        all_ok = False
+        boilerplate_ok = False
+        print(f"{p}: FAIL no GOOGLE ANALYTICS block found")
+    elif ref_analytics is not None and a != ref_analytics:
+        all_ok = False
+        boilerplate_ok = False
+        print(f"{p}: FAIL analytics block differs from {ref_page}")
 if boilerplate_ok:
-    print(f"OK, header and footer blocks byte-identical across all {len(PAGES)} pages")
+    print(f"OK, header, footer, and analytics blocks byte-identical across all {len(PAGES)} pages")
 
 print("\n=== OVERALL:", "PASS" if all_ok else "FAIL", "===")
