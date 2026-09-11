@@ -1,22 +1,6 @@
-/* Self-hosted fonts (assets/fonts/) — vendored from Google Fonts so this
-   page has no external network dependency. Each is a variable font, one
-   file covering its whole weight range; font-display:swap shows fallback
-   text immediately rather than a blank flash while it loads. Licensed
-   under the SIL Open Font License — see assets/fonts/OFL-*.txt. */
-@font-face{
-  font-family:"Public Sans";
-  src:url("fonts/PublicSans-Variable.woff") format("woff");
-  font-weight:100 900;
-  font-style:normal;
-  font-display:swap;
-}
-@font-face{
-  font-family:"JetBrains Mono";
-  src:url("fonts/JetBrainsMono-Variable.woff") format("woff");
-  font-weight:100 900;
-  font-style:normal;
-  font-display:swap;
-}
+/* Fonts, --link, the family-accent tokens, radius scale, and the
+   font-stack tokens now live in assets/shared.css (loaded before this
+   file) — a vendored copy shared with the converters and demo page. */
 
 :root{
   --paper:#fcfcfb;
@@ -25,29 +9,20 @@
   --ink-soft:#5c5e5a;
   --ink-faint:#73756f;  /* darkened from #93958f to clear WCAG AA (4.5:1) for the body copy set in this color */
   --line:#e6e5e1;
-  /* Product-family accents. Docsify -> green (docsify.js.org's mascot); Grav -> purple
-     (Grav 2's brand). Token names kept as --teal/--amber so existing .tk/.am rules still
-     apply. --link is the brand-neutral interaction color (generic links, nav, focus) that
-     belongs to neither family. */
-  --link:#3d6f9e;
-  --teal:#3f8f52;
-  --teal-soft:#e7f3e8;
-  --amber:#6a5691;
-  --amber-soft:#ede9f4;
-  --green:#6a5691;        /* free Grav skeletons — same family as --amber */
-  --green-soft:#ede9f4;
+  /* Product-family accents, aliased from shared.css's --docsify/--helios so
+     the existing .tk/.am/.green rules throughout this file don't need
+     renaming. Docsify -> green (docsify.js.org's mascot); Grav -> purple
+     (Grav 2's brand). */
+  --teal:var(--docsify);
+  --teal-soft:var(--docsify-soft);
+  --amber:var(--helios);
+  --amber-soft:var(--helios-soft);
+  --green:var(--helios);        /* free Grav skeletons — same family as --amber */
+  --green-soft:var(--helios-soft);
   --purple-soft:#f2f0ea;  /* picker box background — a neutral warm tint spanning both families */
   --code-bg:#1c1e1a;
 
-  /* type + shape tokens (same in light and dark, so defined once here) */
-  --font-sans:"Public Sans",-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-mono:"JetBrains Mono",monospace;
   --text-min:1.1rem;      /* the page-wide minimum text size */
-  --radius-sm:6px;
-  --radius-md:10px;
-  --radius-lg:12px;
-  --radius-xl:16px;
-  --radius-pill:100px;
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -57,13 +32,6 @@
     --ink-soft:#b3b5b0;
     --ink-faint:#858785;  /* lightened from #797b76 to clear WCAG AA (4.5:1) for the body copy set in this color */
     --line:#2e3033;
-    --link:#7fabd6;
-    --teal:#6fc484;
-    --teal-soft:#1e3324;
-    --amber:#b09bd4;
-    --amber-soft:#2a2340;
-    --green:#b09bd4;
-    --green-soft:#2a2340;
     --purple-soft:#242427;
     --code-bg:#0e100c;
   }
@@ -92,16 +60,9 @@ h1,h2,h3{
 }
 a{color:inherit;}
 
-/* Keyboard-focus ring, shown only for keyboard/assistive-tech navigation
-   (not on mouse click). Mirrors the color/border feedback each element
-   already gives on :hover below, so keyboard users get the same cue. */
-a:focus-visible,
-button:focus-visible,
-[tabindex]:focus-visible{
-  outline:2px solid var(--link);
-  outline-offset:2px;
-  border-radius:2px;
-}
+/* Keyboard-focus ring lives in shared.css (a bare :focus-visible rule,
+   loaded before this file) so it also covers form controls on other
+   pages in the family, not just links/buttons. */
 
 /* header */
 .site-head{
@@ -572,10 +533,7 @@ button:focus-visible,
 a.badge:hover,
 a.badge:focus-visible{filter:brightness(0.94);}
 
-/* inline text link within prose, e.g. "the Grav Premium Helios theme" */
-.tlink{color:var(--link); font-weight:600; text-decoration:none;}
-.tlink:hover,
-.tlink:focus-visible{text-decoration:underline;}
+/* .tlink (inline text link within prose) lives in shared.css. */
 .project-body h3{font-size:2.3rem; margin-bottom:16px; letter-spacing:-0.025em;}
 /* small, muted version/tech mention next to a card title — mirrors docsify-this.net's own "v2.0" treatment */
 .version-tag{
