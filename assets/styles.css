@@ -510,9 +510,12 @@ button:focus-visible,
   padding:5px 4px;
   white-space:nowrap;
   border-bottom:1.5px solid currentColor;
+  text-decoration:none;
 }
 .prow .a.tk{color:var(--teal);}
 .prow .a.am{color:var(--amber);}
+.prow a.a:hover,
+.prow a.a:focus-visible{filter:brightness(0.94);}
 
 /* project sections, styled like the Grav Helios theme's own bordered content cards */
 .projects{margin-top:110px; display:flex; flex-direction:column; gap:24px;}
