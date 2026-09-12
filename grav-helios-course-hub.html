@@ -1,0 +1,239 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Grav Helios Course Hub &ndash; Course Companion CMS | HibbittsDesign.org</title>
+<meta name="description" content="A single- or multi-course hub built on Grav CMS and the Premium Helios theme &ndash; Markdown files, no database, browser-based Admin panel, LMS embedding.">
+<link rel="canonical" href="https://hibbittsdesign.org/grav-helios-course-hub.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/grav-helios-course-hub.html">
+<meta property="og:title" content="Grav Helios Course Hub &ndash; Course Companion CMS | HibbittsDesign.org">
+<meta property="og:description" content="A single- or multi-course hub built on Grav CMS and the Premium Helios theme &ndash; Markdown files, no database, browser-based Admin panel, LMS embedding.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Grav Helios Course Hub &ndash; Course Companion CMS | HibbittsDesign.org">
+<meta name="twitter:description" content="A single- or multi-course hub built on Grav CMS and the Premium Helios theme &ndash; Markdown files, no database, browser-based Admin panel, LMS embedding.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Grav Helios Course Hub",
+  "url": "https://demo.hibbittsdesign.org/grav-helios-course-hub/",
+  "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-course-hub",
+  "description": "A single- or multi-course hub skeleton built on Grav CMS and the Grav Premium Helios theme, with Markdown file-based content, no database, and a browser-based Admin panel."
+}
+</script>
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="fully-open-source-grav-projects.html">Fully Open-Source Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. GRAV HELIOS COURSE HUB ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge am"><span aria-hidden="true">&#9733;</span> 6</span>
+      <span class="badge am">Made Possible by Premium Helios</span>
+      <span class="badge plain">Grav 2 CMS</span>
+    </div>
+    <h1>Grav Helios Course Hub</h1>
+    <p class="lede">The Grav Helios Course Hub is a ready-to-run skeleton package, built on a plugin architecture, that transforms the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> into a companion site for one or more courses &ndash; built on Grav CMS with Markdown file-based content and an integrated Admin panel.</p>
+    <p class="lede">It gives your course a modern, clean, and organized home on the web: a place to openly share course materials and resources that you keep and control. The Course Hub is the successor to the original Grav Open Course Hub project, re-envisioned from the ground up with multi-course support as the default.</p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <div class="thumb-grid">
+      <figure>
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/" target="_blank" rel="noopener"><img src="assets/grav-helios-course-hub-courses.webp" width="1400" height="1043" alt="Grav Helios Course Hub courses listing, showing example course cards with icons, instructor names, and status badges"></a></div>
+        <figcaption class="thumb-cap">Course Hub &ndash; Courses</figcaption>
+      </figure>
+      <figure>
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/" target="_blank" rel="noopener"><img src="assets/grav-helios-course-hub-weekly.webp" width="1400" height="1044" alt="Grav Helios Course Hub weekly overview page, showing upcoming due dates and required reading for the current week"></a></div>
+        <figcaption class="thumb-cap">Course Hub &ndash; Weekly overview</figcaption>
+      </figure>
+    </div>
+
+    <div class="proj-section">
+      <h2>Who It&#8217;s For</h2>
+      <ul class="feat-list">
+        <li>Educators building a dedicated home for one or more courses</li>
+        <li>Open publishers sharing learning resources and OER</li>
+        <li>Individuals or teams that want a version-controlled, GitHub or Codeberg workflow</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>Built for Teaching and Learning</h2>
+      <p>A single, well-organized home with a clear weekly structure &ndash; giving learners what they need and educators full control.</p>
+      <ul class="feat-list">
+        <li><strong>Clear weekly structure</strong> &ndash; learners can orient quickly with a week-by-week flow</li>
+        <li><strong>One place for everything</strong> &ndash; courses, modules, lessons, resources, and updates stay organized</li>
+        <li><strong>Visual course identity</strong> &ndash; course cards with icons, images, instructor names, and status badges</li>
+        <li><strong>LMS-friendly embedding</strong> &ndash; a URL parameter displays only page content, and can adjust the Table of Contents</li>
+        <li><strong>Findable materials</strong> &ndash; search stays relevant to the current course, and can span courses when needed</li>
+        <li><strong>Scales from one course to many</strong> &ndash; run a single course site or manage multiple courses from one hub</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>What Sets It Apart</h2>
+      <ul class="feat-list">
+        <li><strong>LMS embedding without LTI</strong> &ndash; embed any page directly into Canvas, Moodle, or Brightspace with a URL parameter; no LTI setup, no plugin, no IT negotiation required</li>
+        <li><strong>Single or multi-course</strong> &ndash; share a direct link so students land on their course homepage; add more courses and a full course list becomes the homepage automatically</li>
+        <li><strong>Portable by design</strong> &ndash; your content is plain Markdown files in folders, not a database record; open it in any text editor or move it to another platform entirely</li>
+        <li><strong>Ready for the 5Rs, no extra step</strong> &ndash; plain Markdown means your content is already ready to retain, reuse, revise, remix, and redistribute</li>
+        <li><strong>Course-aware search</strong> &ndash; scopes to the current course when browsing within it, and spans all courses from the Courses homepage</li>
+        <li><strong>No build pipeline</strong> &ndash; edit in the browser-based Admin panel or via Git; changes go live immediately</li>
+      </ul>
+      <p>Migrating an existing Canvas, Moodle, Brightspace, or Blackboard course? The companion <a href="https://helios-common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Common Cartridge Converter</a> (Beta) turns a Common Cartridge (.imscc) export into a Course Hub starting point in minutes &ndash; upload your export and browse the resulting Markdown files directly, no Grav or Helios installation needed to see what carries over.</p>
+    </div>
+
+    <div class="proj-section">
+      <h2>Behind the Scenes</h2>
+      <ul class="feat-list">
+        <li><strong>No database, no complexity</strong> &ndash; content runs on simple text files, easier to back up, version control, and migrate than database-driven platforms</li>
+        <li><strong>Team-ready</strong> &ndash; multi-user editing with role-based access rights for team-managed course content</li>
+        <li><strong>Supports open-source sustainability</strong> &ndash; the Grav Premium Helios theme requires a license, and that revenue directly funds continued development of open-source Grav CMS</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>What&#8217;s Included</h2>
+      <ul class="feat-list">
+        <li>Home + overview pages</li>
+        <li>Weekly modules and lessons</li>
+        <li>Resource and expandable guide pages</li>
+        <li>Topics index and announcement shortcode examples</li>
+        <li>Documentation for facilitators and contributors</li>
+      </ul>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>See It in Action</h2>
+      <div class="links">
+        <a class="cta am" href="https://demo.hibbittsdesign.org/grav-helios-course-hub/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Course Hub demo</a>
+        <a class="cta plain" href="https://getgrav.org/downloads/skeletons#helios-course-hub" target="_blank" rel="noopener">Download</a>
+        <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-helios-course-hub" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Need Help or Customization?</h2>
+      <p>If you&#8217;d like support with setup, theming, content structure, or workflow design, see <a href="services.html" class="tlink">Additional Professional Services &amp; Support</a>. Migrating existing content? Discover <a href="https://grav-helios-converters.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Grav Helios Converters</a>. Publishing a structured open textbook or guide instead? Discover <a href="grav-helios-open-reader.html" class="tlink">Grav Helios Open Reader</a>. Looking to publish standalone Markdown content with no web server required? Discover <a href="docsify-this.html" class="tlink">Docsify&#8209;This</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, guided by his <a href="systems-oriented-design.html" class="tlink">systems-oriented approach to design</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+    <div class="flinks">
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

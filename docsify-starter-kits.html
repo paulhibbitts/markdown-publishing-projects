@@ -1,0 +1,303 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Docsify Starter Kits &ndash; Open Course &amp; Publishing Templates | HibbittsDesign.org</title>
+<meta name="description" content="Free, open-source GitHub Pages templates for course sites, multi-course hubs, and publishing spaces &ndash; your own domain, full CSS control, no build step.">
+<link rel="canonical" href="https://hibbittsdesign.org/docsify-starter-kits.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/docsify-starter-kits.html">
+<meta property="og:title" content="Docsify Starter Kits &ndash; Open Course &amp; Publishing Templates | HibbittsDesign.org">
+<meta property="og:description" content="Free, open-source GitHub Pages templates for course sites, multi-course hubs, and publishing spaces &ndash; your own domain, full CSS control, no build step.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Docsify Starter Kits &ndash; Open Course &amp; Publishing Templates | HibbittsDesign.org">
+<meta name="twitter:description" content="Free, open-source GitHub Pages templates for course sites, multi-course hubs, and publishing spaces &ndash; your own domain, full CSS control, no build step.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Structured data for search engines — one entry per kit -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Docsify Starter Kits",
+  "itemListElement": [
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 1,
+      "name": "Docsify Open Course Starter Kit",
+      "url": "https://hibbitts-design.github.io/demo-docsify-open-course-starter-kit/#/",
+      "codeRepository": "https://github.com/hibbitts-design/docsify-open-course-starter-kit",
+      "description": "A ready-to-use GitHub Pages template for a single open course site."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 2,
+      "name": "Docsify Open MultiCourse Starter Kit",
+      "url": "https://hibbitts-design.github.io/demo-docsify-open-multicourse-starter-kit/#/",
+      "codeRepository": "https://github.com/hibbitts-design/docsify-open-multicourse-starter-kit",
+      "description": "The Open Course Starter Kit plus a top-level course-selection layer, for managing several courses from one site."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "position": 3,
+      "name": "Docsify Open Publishing Starter Kit",
+      "url": "https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/",
+      "codeRepository": "https://github.com/hibbitts-design/docsify-open-publishing-starter-kit",
+      "description": "A ready-to-use GitHub Pages template for writers and publishers sharing articles, tutorials, or documentation."
+    }
+  ]
+}
+</script>
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="fully-open-source-grav-projects.html">Fully Open-Source Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. DOCSIFY STARTER KITS — heading, intro, kit grid, comparison, plugin-style callouts ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge tk">Free &amp; Open Source</span>
+      <span class="badge plain">GitHub Pages</span>
+      <span class="badge plain">No Build Step</span>
+    </div>
+    <h1>Docsify Starter Kits</h1>
+    <p class="lede">The Docsify Starter Kits are a family of free, open-source templates that transform <a href="https://docsify.js.org/" class="tlink" target="_blank" rel="noopener">Docsify</a> into ready-to-run open course sites, multi-course hubs, and publishing spaces &ndash; built on Markdown files hosted on GitHub or Codeberg, with no web server setup required and the flexibility to host anywhere, including your own custom domain.</p>
+    <p class="lede">No build process, complete platform independence, and LMS-ready embedding out of the box &ndash; Docsify generates your site live from Markdown files, so there&#8217;s nothing to compile and no pipeline to maintain.</p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <div class="grav-picker">
+      <h2>How do These Compare to Docsify&#8209;This?</h2>
+      <ul class="grav-picker-list">
+        <li><strong>Comfortable with GitHub?</strong> The Starter Kits are a natural fit &ndash; your repository is the site, with no hosting costs.</li>
+        <li><strong>Want your own URL and full CSS control?</strong> The Starter Kits offer both, and the freedom to host wherever you choose.</li>
+        <li><strong>Not sure yet?</strong> Start with <a href="docsify-this.html" class="tlink">Docsify&#8209;This</a> and move that same content to a Starter Kit later &ndash; no rework required.</li>
+      </ul>
+    </div>
+
+    <h2 style="font-size:1.3rem; margin:0 0 14px;">Choose Your Kit</h2>
+    <div class="kit-grid">
+      <div class="kit">
+        <div class="grav-thumb"><a href="https://hibbitts-design.github.io/demo-docsify-open-course-starter-kit/#/" target="_blank" rel="noopener"><img src="assets/docsify-course-kit-demo.webp" width="1024" height="768" alt="Docsify Open Course Starter Kit demo site, showing a sidebar with weekly course navigation next to a weekly overview page"></a></div>
+        <h4>Open Course Kit</h4>
+        <div class="kit-meta"><span class="badge tk sm"><span aria-hidden="true">&#9733;</span> 51</span></div>
+        <p>A ready-to-use template for a single open course site &ndash; the simplest starting point, with course navigation and a sidebar built in.</p>
+        <div class="links">
+          <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-course-starter-kit/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/docsify-open-course-starter-kit" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="kit">
+        <div class="grav-thumb"><a href="https://hibbitts-design.github.io/demo-docsify-open-multicourse-starter-kit/#/" target="_blank" rel="noopener"><img src="assets/docsify-multicourse-kit-demo.webp" width="1024" height="768" alt="Docsify Open MultiCourse Starter Kit demo site, showing a course-selection layer with three example courses"></a></div>
+        <h4>Open MultiCourse Kit</h4>
+        <div class="kit-meta"><span class="badge tk sm"><span aria-hidden="true">&#9733;</span> 13</span></div>
+        <p>The Open Course Kit plus a course-selection layer, for educators and facilitators managing several courses from one site.</p>
+        <div class="links">
+          <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-multicourse-starter-kit/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/docsify-open-multicourse-starter-kit" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="kit">
+        <div class="grav-thumb"><a href="https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/" target="_blank" rel="noopener"><img src="assets/docsify-publishing-kit-demo.webp" width="1024" height="768" alt="Docsify Open Publishing Starter Kit demo page, showing a hero photo above a list of website pages and topics"></a></div>
+        <h4>Open Publishing Kit</h4>
+        <div class="kit-meta"><span class="badge tk sm"><span aria-hidden="true">&#9733;</span> 61</span></div>
+        <p>Suits articles, tutorials, and documentation &ndash; the right choice if you're publishing content rather than running a course.</p>
+        <div class="links">
+          <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/docsify-open-publishing-starter-kit" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customized variation demos -- also usable as their own starting templates,
+         not just examples to look at. -->
+    <div class="kit-examples">
+      <p class="kit-examples-label">More Examples: Customized Variations</p>
+      <p class="kit-examples-intro">Beyond the three kits above, these demos show further customization on the same foundation &ndash; and each is itself a ready-to-use starting template, not just an example to look at.</p>
+      <div class="kit-examples-list">
+        <div class="kit-example">
+          <div class="kit-example-text">
+            <p class="kit-example-title">Open Publishing Kit &ndash; Blog Layout</p>
+            <p class="kit-example-desc">A blog-style variation of the Open Publishing Starter Kit, suited to chronological, article-style content.</p>
+          </div>
+          <div class="links">
+            <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-blog/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+            <a class="cta plain" href="https://github.com/hibbitts-design/demo-docsify-open-publishing-starter-kit-blog" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="kit-example">
+          <div class="kit-example-text">
+            <p class="kit-example-title">Open Publishing Kit &ndash; Multi-Language</p>
+            <p class="kit-example-desc">A multilingual variation of the Open Publishing Starter Kit, for content and navigation in more than one language.</p>
+          </div>
+          <div class="links">
+            <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-multilanguage/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+            <a class="cta plain" href="https://github.com/hibbitts-design/demo-docsify-open-publishing-starter-kit-multilanguage" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="kit-example">
+          <div class="kit-example-text">
+            <p class="kit-example-title">Open MultiCourse Kit &ndash; Card Layout</p>
+            <p class="kit-example-desc">A card-based visual variation of the Open MultiCourse Starter Kit.</p>
+          </div>
+          <div class="links">
+            <a class="cta tk" href="https://hibbitts-design.github.io/demo-docsify-open-multicourse-starter-kit-cards/#/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+            <a class="cta plain" href="https://github.com/hibbitts-design/demo-docsify-open-multicourse-starter-kit-cards" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-section">
+      <h2>Built for Publishing and Sharing</h2>
+      <p>A complete, ready-to-run site from your Markdown files &ndash; yours to host, customize, and share wherever you choose.</p>
+      <ul class="feat-list">
+        <li><strong>Customizable</strong> &ndash; adjust fonts, colors, and behavior with CSS</li>
+        <li><strong>Edit in place</strong> &ndash; update your Markdown source files directly on GitHub, no re-publishing needed</li>
+        <li><strong>Live preview, no build step</strong> &ndash; commit to GitHub and changes go live shortly after, or work locally and see changes instantly</li>
+        <li><strong>Optional "Edit this Page" link</strong> &ndash; for easy community contribution and open authoring</li>
+        <li><strong>LMS-ready embedding</strong> &ndash; URL parameters toggle the Table of Contents, navbar, and page-only display</li>
+        <li><strong>Open by default</strong> &ndash; your content lives in your own GitHub repository, portable and version-controlled throughout</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>What&#8217;s Available</h2>
+      <ul class="feat-list">
+        <li>Open Course, MultiCourse, and Open Publishing site templates</li>
+        <li>LMS-ready embedding with <code>?embedded=true</code> and related URL parameters</li>
+        <li>Built-in CSS classes for buttons, cards, accordions, badges, image layouts, and more</li>
+        <li>Optional page Table of Contents, footer, navbar, and "Edit this Page" link</li>
+        <li>Guides and documentation in each kit&#8217;s README</li>
+      </ul>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Get Started Now</h2>
+      <p>Each link below takes you directly to GitHub to create your own copy of the chosen template in your GitHub account.</p>
+      <div class="links">
+        <a class="cta tk" href="https://github.com/new?template_name=docsify-open-course-starter-kit&template_owner=hibbitts-design" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Use the Open Course Kit</a>
+        <a class="cta tk" href="https://github.com/new?template_name=docsify-open-multicourse-starter-kit&template_owner=hibbitts-design" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Use the Open MultiCourse Kit</a>
+        <a class="cta tk" href="https://github.com/new?template_name=docsify-open-publishing-starter-kit&template_owner=hibbitts-design" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Use the Open Publishing Kit</a>
+      </div>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Need Help or Customization?</h2>
+      <p>If you&#8217;d like support with setup, workflows, embedding, or custom development, see <a href="services.html" class="tlink">Additional Professional Services &amp; Support</a>. Looking to publish standalone Markdown content with no GitHub Pages setup required? Discover <a href="docsify-this.html" class="tlink">Docsify&#8209;This</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, guided by his <a href="systems-oriented-design.html" class="tlink">systems-oriented approach to design</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+    <div class="flinks">
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

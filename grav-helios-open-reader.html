@@ -1,0 +1,239 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Grav Helios Open Reader &ndash; Open Textbook &amp; OER Reader | HibbittsDesign.org</title>
+<meta name="description" content="A modern, web-first reader for open textbooks and OER, built on Grav CMS and the Premium Helios theme &ndash; Markdown files, no database, dark mode included.">
+<link rel="canonical" href="https://hibbittsdesign.org/grav-helios-open-reader.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/grav-helios-open-reader.html">
+<meta property="og:title" content="Grav Helios Open Reader &ndash; Open Textbook &amp; OER Reader | HibbittsDesign.org">
+<meta property="og:description" content="A modern, web-first reader for open textbooks and OER, built on Grav CMS and the Premium Helios theme &ndash; Markdown files, no database, dark mode included.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Grav Helios Open Reader &ndash; Open Textbook &amp; OER Reader | HibbittsDesign.org">
+<meta name="twitter:description" content="A modern, web-first reader for open textbooks and OER, built on Grav CMS and the Premium Helios theme &ndash; Markdown files, no database, dark mode included.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Grav Helios Open Reader",
+  "url": "https://demo.hibbittsdesign.org/grav-helios-open-reader/",
+  "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-helios-open-reader",
+  "description": "A web-first, database-free open reader platform built on Grav CMS and the Grav Premium Helios theme, for publishing open textbooks, guides, and OER."
+}
+</script>
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="fully-open-source-grav-projects.html">Fully Open-Source Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. GRAV HELIOS OPEN READER ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge am">Made Possible by Premium Helios</span>
+      <span class="badge plain">Grav 2 CMS</span>
+    </div>
+    <h1>Grav Helios Open Reader</h1>
+    <p class="lede">The Grav Helios Open Reader is a ready-to-run skeleton package, built on a plugin architecture, that transforms the <a href="https://getgrav.org/premium/helios" class="tlink" target="_blank" rel="noopener">Grav Premium Helios theme</a> into a structured reader for open textbooks, long-form web guides, and OER publications &ndash; built on Grav CMS with Markdown file-based content and an integrated Admin panel.</p>
+    <p class="lede">It gives your open content a modern, clean, and organized home on the web: a place to openly publish course readers, textbooks, and learning resources that you keep and control. Host a single publication or a full collection, all from one install.</p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <div class="thumb-grid">
+      <figure>
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" target="_blank" rel="noopener"><img src="assets/grav-helios-open-reader-home.webp" width="1400" height="996" alt="Grav Helios Open Reader home page, showing chapter cards with cover images for a published guide"></a></div>
+        <figcaption class="thumb-cap">Open Reader &ndash; Reader home</figcaption>
+      </figure>
+      <figure>
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" target="_blank" rel="noopener"><img src="assets/grav-helios-open-reader-section.webp" width="1400" height="996" alt="Grav Helios Open Reader section page, showing a chapter introduction with a Learning Objectives callout block"></a></div>
+        <figcaption class="thumb-cap">Open Reader &ndash; Section page with learning objectives</figcaption>
+      </figure>
+    </div>
+
+    <div class="proj-section">
+      <h2>Who It&#8217;s For</h2>
+      <ul class="feat-list">
+        <li>Educators publishing open textbooks, course readers, and OER materials</li>
+        <li>Students documenting individual or group projects</li>
+        <li>Open publishers sharing structured learning resources</li>
+        <li>Individuals or teams that want a version-controlled, GitHub or Codeberg workflow</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>Built for Open Publishing and Learning</h2>
+      <p>A single, well-organized reader with a clear section structure &ndash; giving learners a focused reading experience and authors full control.</p>
+      <ul class="feat-list">
+        <li><strong>Clean reading experience</strong> &ndash; a distraction-free, web-first layout optimized for focused reading</li>
+        <li><strong>Structured sections and parts</strong> &ndash; organize content into sections with optional part groupings for longer works</li>
+        <li><strong>Educational callout blocks</strong> &ndash; eleven purpose-built block types: Learning Objectives, Exercises, Definitions, Key Takeaways, and more</li>
+        <li><strong>Smart search</strong> &ndash; results grouped by section or part and sorted by relevance</li>
+        <li><strong>LMS-friendly embedding</strong> &ndash; a URL parameter displays only page content, and can adjust the Table of Contents</li>
+        <li><strong>Dark and light mode</strong> &ndash; readers choose their preferred theme, with automatic system-preference detection</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>What Sets It Apart</h2>
+      <ul class="feat-list">
+        <li><strong>Readers never lose their place</strong> &ndash; Keep My Place records the last section visited and surfaces a dismissable Continue Reading strip, across sessions and devices</li>
+        <li><strong>Embeds cleanly into any LMS</strong> &ndash; append <code>?embedded=true</code> to any page URL for content-only display; internal links carry the parameter forward automatically</li>
+        <li><strong>No build pipeline, ever</strong> &ndash; edit directly in the browser-based Admin panel and changes go live immediately</li>
+        <li><strong>Open collaborative authoring</strong> &ndash; built-in Git Sync means changes sync automatically with no deploy cycle; collaborators contribute directly via Git</li>
+        <li><strong>Plain text export for open access</strong> &ndash; optionally generate structured plain-text endpoints for every page, ready for search indexing, ebook pipelines, and AI-based tools</li>
+        <li><strong>Ready for the 5Rs, no extra step</strong> &ndash; plain Markdown means your content is already ready to retain, reuse, revise, remix, and redistribute</li>
+      </ul>
+      <p>Migrating an existing Pressbooks book? The companion <a href="https://helios-pressbooks-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Pressbooks Converter</a> (Beta) transforms a Pressbooks XHTML export into a complete Open Reader in minutes &ndash; sections, chapters, learning objectives, H5P activity links, cover image, license, and OER attribution all carried across automatically.</p>
+    </div>
+
+    <div class="proj-section">
+      <h2>Behind the Scenes</h2>
+      <ul class="feat-list">
+        <li><strong>No database, no complexity</strong> &ndash; runs on simple text files, easier to back up, version control, and migrate than database-driven platforms</li>
+        <li><strong>Team-ready</strong> &ndash; multi-user editing with role-based access rights for team-managed reader content</li>
+        <li><strong>Supports open-source sustainability</strong> &ndash; the Grav Premium Helios theme requires a license, and that revenue directly funds continued development of open-source Grav CMS</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>What&#8217;s Included</h2>
+      <ul class="feat-list">
+        <li>Reader home page with cover image, title, subtitle, authors, edition, and CC license badge</li>
+        <li>Pre-configured demo sections with sub-pages</li>
+        <li>Educational callout block examples (Learning Objectives, Exercises, Definitions, and more)</li>
+        <li>Embedding examples (iFrames, Google Slides, PDFs, H5P)</li>
+        <li>OER attribution block and CC licensing support</li>
+      </ul>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>See It in Action</h2>
+      <div class="links">
+        <a class="cta am" href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Open Reader demo</a>
+        <a class="cta plain" href="https://getgrav.org/downloads/skeletons#helios-open-reader" target="_blank" rel="noopener">Download</a>
+        <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-helios-open-reader" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Need Help or Customization?</h2>
+      <p>If you&#8217;d like support with setup, theming, content structure, or workflow design, see <a href="services.html" class="tlink">Additional Professional Services &amp; Support</a>. Migrating existing content? Discover <a href="https://grav-helios-converters.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Grav Helios Converters</a>. Looking to build a companion site for one or more courses instead? Discover <a href="grav-helios-course-hub.html" class="tlink">Grav Helios Course Hub</a>. Looking to publish standalone Markdown content with no web server required? Discover <a href="docsify-this.html" class="tlink">Docsify&#8209;This</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, guided by his <a href="systems-oriented-design.html" class="tlink">systems-oriented approach to design</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+    <div class="flinks">
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

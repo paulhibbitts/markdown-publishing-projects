@@ -98,7 +98,7 @@ a{color:inherit;}
    instead of overflowing the viewport. overflow-wrap:anywhere stays on as
    a last-resort fallback for any narrower context the <wbr> alone can't cover. */
 .brand span{min-width:0; overflow-wrap:anywhere;}
-.site-head nav{display:flex; gap:32px;}
+.site-head nav{display:flex; align-items:flex-start; gap:32px;}
 .site-head nav a{
   font-size:var(--text-min);
   font-weight:600;
@@ -107,6 +107,46 @@ a{color:inherit;}
 }
 .site-head nav a:hover,
 .site-head nav a:focus-visible{color:var(--link);}
+
+/* "Projects" nav dropdown — opens only on an explicit click or Enter
+   activation (see the small script nested inside the header itself, in
+   tools/partials/header.html), never just on hover or on receiving
+   keyboard focus. Deliberately NOT a :focus-within rule: this menu also
+   needs to close on Escape and return focus to the trigger, and if
+   :focus-within controlled visibility, refocusing the trigger to close it
+   would immediately reopen it. Visibility and focus must stay independent.
+   The trigger is a real link to index.html#projects, so it still goes
+   somewhere useful with JS disabled. */
+/* display:flex (not the default block) avoids a font-size strut mismatch:
+   .nav-item has no font-size of its own, so as a plain block it inherits
+   a larger one than its .dropdown-trigger child, whose line box then sits
+   taller than the trigger and baseline-aligns it a few px lower than the
+   plain-text nav links beside it. */
+.nav-item{position:relative; display:flex; align-items:flex-start;}
+.dropdown-trigger{display:inline-flex; align-items:center; gap:5px;}
+.dropdown-trigger::after{
+  content:"";
+  width:6px; height:6px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg);
+  margin-top:-3px;
+}
+.dropdown-menu{
+  position:absolute; top:calc(100% + 16px); left:-12px;
+  display:none; flex-direction:column; gap:2px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:8px;
+  min-width:230px;
+  box-shadow:0 10px 30px rgba(0,0,0,.14);
+  z-index:30;
+}
+.nav-item.open .dropdown-menu{display:flex;}
+.dropdown-menu a{padding:9px 10px; border-radius:6px; white-space:nowrap;}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible{background:var(--paper);}
 
 /* hero */
 .hero{padding:76px 0 20px;}
@@ -704,6 +744,15 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .projects-foot a{color:var(--link); font-weight:600; text-decoration:none;}
 .projects-foot a:hover,
 .projects-foot a:focus-visible{text-decoration:underline;}
+/* .projects-foot reused inside a .project-body card (the "Learn more" line
+   under each homepage project's feature list) -- .project-body p already
+   sets font-size:1.22rem at higher specificity than plain .projects-foot,
+   so it needs to be re-stated here to actually win. */
+.project-body .projects-foot{font-size:var(--text-min); margin:24px 0 0;}
+/* extra breathing room when a row of Demo/GitHub-style buttons follows the
+   "Learn more" line directly (not the Starter Kits card, where a kit grid
+   follows instead) */
+.projects-foot + .links{margin-top:20px;}
 
 /* contact page — Tally form embed, placed directly on the page (no card
    border/background) so it reads as part of the page's own open layout
@@ -766,6 +815,14 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .grav-thumb img{display:block; width:100%; height:auto;}
 .grav-thumb a:hover img,
 .grav-thumb a:focus-visible img{filter:brightness(0.94);}
+/* two screenshots side by side on a dedicated project page (docsify-this.html
+   and friends) -- narrower gap than .grav-grid since these are two views of
+   the same product, not separate cards. .grav-thumb's own bottom margin is
+   redundant once the grid gap is doing that spacing. */
+.thumb-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:28px 0;}
+.thumb-grid figure{margin:0;}
+.thumb-grid .grav-thumb{margin:0;}
+.thumb-cap{font-size:0.92rem; color:var(--ink-faint); text-align:center; margin:10px 0 0;}
 .grav-card h3{font-size:1.28rem; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px;}
 .grav-card .badge-row{margin:0 0 10px;}
 .grav-card p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:0 0 16px;}
@@ -797,6 +854,12 @@ footer .flinks a{font-size:var(--text-min); color:var(--ink-soft); text-decorati
 footer .flinks a:hover,
 footer .flinks a:focus-visible{color:var(--link);}
 
+/* comparison / narrative sections on the dedicated project pages, reusing
+   the Grav projects page's callout-box rhythm */
+.proj-section{margin:48px 0;}
+.proj-section h2{font-size:1.5rem; letter-spacing:-0.015em; margin:0 0 14px;}
+.proj-section p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.65; max-width:70ch; margin:0 0 16px;}
+
 @media (max-width:760px){
   body{font-size:18px;}
   .site-head{flex-wrap:wrap; gap:14px 0; row-gap:14px;}
@@ -814,6 +877,7 @@ footer .flinks a:focus-visible{color:var(--link);}
   .kit-example{flex-direction:column; align-items:flex-start; gap:10px;}
   .service-grid{grid-template-columns:1fr; gap:32px;}
   .grav-grid{grid-template-columns:1fr; gap:32px;}
+  .thumb-grid{grid-template-columns:1fr; gap:20px;}
   .testi-grid{column-count:1;}
   .more{padding:28px;}
   .tools{padding:28px;}

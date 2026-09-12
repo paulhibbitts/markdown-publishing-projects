@@ -1,0 +1,231 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Docsify&#8209;This &ndash; Instant Markdown Web Publishing | HibbittsDesign.org</title>
+<meta name="description" content="Turn any public Markdown file into a styled, shareable web page in seconds &ndash; no setup, no build step, no server required. Free and open-source.">
+<link rel="canonical" href="https://hibbittsdesign.org/docsify-this.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/docsify-this.html">
+<meta property="og:title" content="Docsify&#8209;This &ndash; Instant Markdown Web Publishing | HibbittsDesign.org">
+<meta property="og:description" content="Turn any public Markdown file into a styled, shareable web page in seconds &ndash; no setup, no build step, no server required. Free and open-source.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Docsify&#8209;This &ndash; Instant Markdown Web Publishing | HibbittsDesign.org">
+<meta name="twitter:description" content="Turn any public Markdown file into a styled, shareable web page in seconds &ndash; no setup, no build step, no server required. Free and open-source.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Docsify-This",
+  "url": "https://docsify-this.net",
+  "codeRepository": "https://github.com/hibbitts-design/docsify-this",
+  "description": "A free, open-source web app that instantly turns any public Markdown file into a styled, shareable web page or embeddable widget – no setup, no build step, no server required."
+}
+</script>
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="fully-open-source-grav-projects.html">Fully Open-Source Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. DOCSIFY-THIS — heading, intro, feature list, Web Page Builder, get started ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge tk"><span aria-hidden="true">&#9733;</span> 147</span>
+      <span class="badge tk"><span aria-hidden="true">&#127942;</span> Award Finalist</span>
+      <span class="badge plain">v2.0 &middot; Docsify v5</span>
+    </div>
+    <h1>Docsify&#8209;This</h1>
+    <p class="lede">Docsify&#8209;This is a free, open-source web app that transforms online Markdown files into styled, responsive web pages &ndash; with no webserver setup, build process, or technical knowledge required. Just provide a public Markdown file URL to instantly publish and share styled content.</p>
+    <p class="lede">It gives your Markdown content a clean, professional home on the web &ndash; ready to share as a standalone page or embed into almost any platform. Content stays in the Markdown files you already have, wherever they are hosted. Named a finalist in the Open Infrastructure category for the 2024 Open Education Awards for Excellence.</p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <div class="proj-section" style="margin-top:0;">
+      <h2>Who It&#8217;s For</h2>
+      <ul class="feat-list">
+        <li>Educators sharing course materials, OER, and resources across platforms</li>
+        <li>Writers and publishers wanting frictionless Markdown web publishing</li>
+        <li>Teams maintaining documentation in GitHub or Codeberg repositories</li>
+        <li>Anyone who wants to share content without platform lock-in</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>Built for Publishing and Sharing</h2>
+      <p>Instant styled web pages from your Markdown files &ndash; wherever they are hosted and wherever you want to share them.</p>
+      <ul class="feat-list">
+        <li><strong>Instant publishing</strong> &ndash; paste a Markdown file URL and get a styled, shareable web page in seconds</li>
+        <li><strong>Single pages or full sites</strong> &ndash; publish one standalone page or an entire multi-page course or documentation site</li>
+        <li><strong>Point-and-click styling</strong> &ndash; the Web Page Builder lets you customize fonts, colors, and layout without touching code</li>
+        <li><strong>Styled URLs are shareable</strong> &ndash; your appearance choices are encoded in the URL, so sharing the link shares the styled experience</li>
+        <li><strong>Embeds anywhere</strong> &ndash; publish standalone pages or embed content into Canvas, Moodle, WordPress, or almost any platform</li>
+        <li><strong>Edit in place</strong> &ndash; update your Markdown source files and changes go live shortly after saving</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>The Web Page Builder</h2>
+      <p>A point-and-click interface for transforming Markdown files into styled web pages &ndash; choose page layout, fonts, colors, and more, then publish.</p>
+      <div class="thumb-grid">
+        <figure>
+          <div class="grav-thumb"><a href="https://docsify-this.net" target="_blank" rel="noopener"><img src="assets/docsify-this-builder.webp" width="1400" height="978" alt="Docsify-This Web Page Builder, showing a Markdown file URL field, a green Publish as a Web Page button, and page layout options"></a></div>
+          <figcaption class="thumb-cap">Docsify&#8209;This &ndash; Web Page Builder</figcaption>
+        </figure>
+        <figure>
+          <div class="grav-thumb"><a href="https://docsify-this.net" target="_blank" rel="noopener"><img src="assets/docsify-this-published.webp" width="1400" height="978" alt="A Docsify-This published web page, showing styled Markdown content ready to share or embed"></a></div>
+          <figcaption class="thumb-cap">Docsify&#8209;This &ndash; Example Published Page</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="proj-section">
+      <h2>Behind the Scenes</h2>
+      <ul class="feat-list">
+        <li><strong>No setup, no hosting</strong> &ndash; works with any public Markdown file on GitHub, Codeberg, or any accessible URL</li>
+        <li><strong>Ready in seconds</strong> &ndash; visit docsify-this.net and start publishing immediately</li>
+        <li><strong>Team-friendly</strong> &ndash; enable "Edit this Page" links for community contribution and collaborative workflows</li>
+        <li><strong>Open editing workflow</strong> &ndash; optionally keep content in Git repositories for version control and collaborative editing</li>
+      </ul>
+    </div>
+
+    <div class="proj-section">
+      <h2>What&#8217;s Available</h2>
+      <ul class="feat-list">
+        <li>One Page Article and Course templates</li>
+        <li>Multiple Page Course Site and Open Publishing Site templates</li>
+        <li>LMS-ready content page templates for Canvas, Moodle, and more</li>
+        <li>Built-in CSS classes for buttons, cards, accordions, badges, and more</li>
+        <li>Guides and learning materials for new and experienced publishers</li>
+      </ul>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Get Started Now</h2>
+      <div class="links">
+        <a class="cta tk" href="https://docsify-this.net" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it live</a>
+        <a class="cta plain" href="https://github.com/hibbitts-design/docsify-this" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Need Help or Customization?</h2>
+      <p>If you&#8217;d like support with setup, workflows, embedding, or custom development, see <a href="services.html" class="tlink">Additional Professional Services &amp; Support</a>. Need a more capable course companion site? Learn about <a href="grav-helios-course-hub.html" class="tlink">Grav Helios Course Hub</a>. Ready for your own URL and deeper customization? The <a href="docsify-starter-kits.html" class="tlink">Docsify Starter Kits</a> are the natural next step.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, guided by his <a href="systems-oriented-design.html" class="tlink">systems-oriented approach to design</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+    <div class="flinks">
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

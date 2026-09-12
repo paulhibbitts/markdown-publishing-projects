@@ -129,12 +129,64 @@
   <header class="site-head">
     <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
     <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="fully-open-source-grav-projects.html">Fully Open-Source Grav Projects</a>
+        </div>
+      </div>
       <a href="about.html">About Paul</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
-
-  <!-- ============ 2. HERO — headline, subhead, markdown-to-published demo ============ -->
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. HERO — headline, subhead, markdown-to-published demo ============ -->
   <section class="hero">
     <div class="badge-row eyebrow-row">
       <span class="badge plain">Open Source</span>
@@ -220,19 +272,19 @@ Turn any Markdown file into a
     <h2>Which one do I need?</h2>
     <div class="prow">
       <p class="q"><strong>I want to publish a page – or several – right now,</strong> with no setup and nothing to install.</p>
-      <a class="a tk" href="#docsify-this">Docsify&#8209;This</a>
+      <a class="a tk" href="docsify-this.html">Docsify&#8209;This</a>
     </div>
     <div class="prow">
       <p class="q"><strong>I want my own domain or custom CSS,</strong> with a whole site living in my own GitHub repository (no coding needed), deployed to GitHub Pages for free.</p>
-      <a class="a tk" href="#docsify-starter-kits">Docsify Starter Kits</a>
+      <a class="a tk" href="docsify-starter-kits.html">Docsify Starter Kits</a>
     </div>
     <div class="prow">
       <p class="q"><strong>I'm building a single or multiple course site</strong> and want a modern course home for my students, with a full admin panel, no database required.</p>
-      <a class="a am" href="#course-hub">Grav Helios Course Hub</a>
+      <a class="a am" href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
     </div>
     <div class="prow">
       <p class="q"><strong>I'm publishing an open textbook or other long-form OER</strong> and want a web-first reader experience, with a full admin panel, no database required.</p>
-      <a class="a am" href="#open-reader">Grav Helios Open Reader</a>
+      <a class="a am" href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
     </div>
   </section>
 
@@ -262,6 +314,7 @@ Turn any Markdown file into a
           <li>Full-text search across multi-page sites</li>
           <li>Rich content: H5P, LaTeX, Mermaid diagrams &amp; more</li>
         </ul>
+        <p class="projects-foot"><a href="docsify-this.html">Learn more<span class="sr-only"> about Docsify&#8209;This</span> &rarr;</a></p>
         <div class="links">
           <a class="cta tk" href="https://docsify-this.net" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Try it live</a>
           <a class="cta plain" href="https://github.com/hibbitts-design/docsify-this" target="_blank" rel="noopener">View on GitHub</a>
@@ -285,6 +338,7 @@ Turn any Markdown file into a
           <li>Free <a href="https://docsify-common-cartridge-converter.hibbittsdesign.org/" class="tlink" target="_blank" rel="noopener">Cartridge Converter</a> imports Canvas, Moodle &amp; Brightspace courses (beta)</li>
           <li>Edit-on-GitHub workflow, or sync local edits with <a href="https://desktop.github.com/" class="tlink" target="_blank" rel="noopener">GitHub Desktop</a> &ndash; no coding required, just text files</li>
         </ul>
+        <p class="projects-foot"><a href="docsify-starter-kits.html">Learn more<span class="sr-only"> about Docsify Starter Kits</span> &rarr;</a></p>
         <div class="kit-grid">
           <div class="kit">
             <h4>Open Course Kit</h4>
@@ -401,6 +455,7 @@ Turn any Markdown file into a
           <li>Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+</li>
           <li>Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel</li>
         </ul>
+        <p class="projects-foot"><a href="grav-helios-course-hub.html">Learn more<span class="sr-only"> about Grav Helios Course Hub</span> &rarr;</a></p>
         <div class="links">
           <a class="cta am" href="https://demo.hibbittsdesign.org/grav-helios-course-hub/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
           <a class="cta plain" href="https://getgrav.org/downloads/skeletons#helios-course-hub" target="_blank" rel="noopener">Download</a>
@@ -428,6 +483,7 @@ Turn any Markdown file into a
           <li>Built on Grav 2 CMS &ndash; no database required, runs on almost any standard web host with PHP 8.3+</li>
           <li>Git Sync keeps your local files and live site matched automatically, plus a browser-based admin panel</li>
         </ul>
+        <p class="projects-foot"><a href="grav-helios-open-reader.html">Learn more<span class="sr-only"> about Grav Helios Open Reader</span> &rarr;</a></p>
         <div class="links">
           <a class="cta am" href="https://demo.hibbittsdesign.org/grav-helios-open-reader/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> See the demo</a>
           <a class="cta plain" href="https://getgrav.org/downloads/skeletons#helios-open-reader" target="_blank" rel="noopener">Download</a>
@@ -486,7 +542,7 @@ Turn any Markdown file into a
       <li><a href="https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync" target="_blank" rel="noopener">Learn2 with Git Sync</a><span>&ndash; documentation sites on the free Learn2 theme, with search and RSS/Atom feeds</span></li>
       <li class="more-sep"><a href="https://github.com/hibbitts-design/grav-plugin-git-page-link" target="_blank" rel="noopener">Git Page Link Plugin</a><span>&ndash; adds an "Edit this Page" / "View Source" link back to the Markdown source, on most Grav themes</span></li>
     </ul>
-    <p class="more-foot"><a href="fully-open-source-grav-projects.html">See all fully open-source Grav projects &rarr;</a></p>
+    <p class="more-foot"><a href="fully-open-source-grav-projects.html">Learn more<span class="sr-only"> about fully open-source Grav projects</span> &rarr;</a></p>
   </section>
 
   <!-- ============ 7. FOOTER — byline + links ============ -->

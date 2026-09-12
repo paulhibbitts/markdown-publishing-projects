@@ -38,7 +38,9 @@ _PARTIALS_DIR = os.path.join(_SCRIPT_DIR, "partials")
 
 PAGES = ["index.html", "contact.html", "services.html", "fully-open-source-grav-projects.html",
          "about.html", "open-source-with-a-positive-vibe.html", "testimonials.html",
-         "dual-purpose-documentation-framework.html", "systems-oriented-design.html"]
+         "dual-purpose-documentation-framework.html", "systems-oriented-design.html",
+         "docsify-this.html", "docsify-starter-kits.html", "grav-helios-course-hub.html",
+         "grav-helios-open-reader.html"]
 # NOTE: keep this list in sync with the identical PAGES list in
 # verify_all_v2.py, error_check.py, and playwright_sweep_v2.py --
 # add a new page to all four when one is created.
