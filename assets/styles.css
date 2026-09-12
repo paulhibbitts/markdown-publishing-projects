@@ -159,6 +159,11 @@ a{color:inherit;}
   overflow-wrap:break-word;
   hyphens:auto;
 }
+/* the three essay pages carry full-sentence titles, much longer than any
+   other page's h1 -- at the standard 16ch width those wrap to 4 heavy
+   lines, so this widens the line box (font-size unchanged keeps them still
+   reading as the same weight of headline, just fewer, more even lines) */
+.hero h1.essay-title{max-width:30ch;}
 .hero .lede{
   margin:26px 0 0;
   font-size:1.42rem;
@@ -606,6 +611,12 @@ a.badge:focus-visible{filter:brightness(0.94);}
   display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px 24px;
   margin-top:4px;
 }
+/* flex column so .links (Demo/GitHub) sits flush at the same baseline across
+   a row regardless of how many lines a given kit's description wraps to --
+   grid rows already stretch cells to equal height, this just anchors the
+   button row to the bottom of that height instead of floating wherever the
+   preceding content happens to end */
+.kit{display:flex; flex-direction:column;}
 .kit h4{
   font-family:var(--font-sans); font-size:1.1rem; font-weight:700;
   letter-spacing:-0.01em;
@@ -618,7 +629,7 @@ a.badge:focus-visible{filter:brightness(0.94);}
   font-size:var(--text-min); color:var(--ink-soft); line-height:1.5;
   margin:0 0 14px;
 }
-.kit .links{gap:10px;}
+.kit .links{gap:10px; margin-top:auto;}
 /* secondary "customized variation" demos, nested below the three core kits --
    deliberately lighter-weight than .kit-grid (mono eyebrow label instead of an
    h4, no star badge) and laid out as a single-row-per-demo list rather than a
@@ -841,6 +852,7 @@ a.badge:focus-visible{filter:brightness(0.94);}
 .grav-plugin h2{font-size:1.3rem; margin:0 0 10px;}
 .grav-plugin p{font-size:var(--text-min); color:var(--ink-soft); line-height:1.6; margin:0 0 16px; max-width:70ch;}
 .grav-plugin .links{gap:10px;}
+.grav-plugin .links + p{margin-top:20px;}
 
 /* footer */
 footer{
