@@ -749,6 +749,11 @@ a.badge:focus-visible{filter:brightness(0.94);}
    sets font-size:1.22rem at higher specificity than plain .projects-foot,
    so it needs to be re-stated here to actually win. */
 .project-body .projects-foot{font-size:var(--text-min); margin:24px 0 0;}
+/* same reuse issue inside a dedicated project page's .grav-plugin box (the
+   "See what educators and users are saying" line before a Get Started
+   button row) -- .grav-plugin p already sets its own margin at higher
+   specificity than plain .projects-foot, so it needs to be re-stated here. */
+.grav-plugin .projects-foot{margin:40px 0 0;}
 /* extra breathing room when a row of Demo/GitHub-style buttons follows the
    "Learn more" line directly (not the Starter Kits card, where a kit grid
    follows instead) */

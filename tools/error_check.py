@@ -9,7 +9,7 @@ os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PAGES = ["index.html", "contact.html", "services.html", "fully-open-source-grav-projects.html",
          "about.html", "open-source-with-a-positive-vibe.html", "testimonials.html",
          "dual-purpose-documentation-framework.html", "systems-oriented-design.html",
-         "docsify-this.html", "docsify-starter-kits.html", "grav-helios-course-hub.html",
+         "docsify-this.html", "docsify-this-tutorials-workshops.html", "docsify-starter-kits.html", "grav-helios-course-hub.html",
          "grav-helios-open-reader.html"]
 # NOTE: keep this list in sync with the identical PAGES list in
 # verify_all_v2.py, playwright_sweep_v2.py, and sync_boilerplate.py --

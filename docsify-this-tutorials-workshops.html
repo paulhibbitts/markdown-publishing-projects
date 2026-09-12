@@ -1,0 +1,176 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Docsify&#8209;This Tutorials &amp; Workshops | HibbittsDesign.org</title>
+<meta name="description" content="Free guides, an interactive workshop, video tutorials, and community links to help you get the most out of Docsify&#8209;This.">
+<link rel="canonical" href="https://hibbittsdesign.org/docsify-this-tutorials-workshops.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/docsify-this-tutorials-workshops.html">
+<meta property="og:title" content="Docsify&#8209;This Tutorials &amp; Workshops | HibbittsDesign.org">
+<meta property="og:description" content="Free guides, an interactive workshop, video tutorials, and community links to help you get the most out of Docsify&#8209;This.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Docsify&#8209;This Tutorials &amp; Workshops | HibbittsDesign.org">
+<meta name="twitter:description" content="Free guides, an interactive workshop, video tutorials, and community links to help you get the most out of Docsify&#8209;This.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="fully-open-source-grav-projects.html">Fully Open-Source Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. DOCSIFY-THIS TUTORIALS & WORKSHOPS — guides, video, community ============ -->
+  <section class="hero">
+    <h1>Docsify&#8209;This Tutorials &amp; Workshops</h1>
+    <p class="lede">New to Docsify&#8209;This or looking to learn more? This page guides you from quick start to more advanced techniques &ndash; no webserver, no build process, and no installation required, whether you're publishing documentation, course materials, or any other content you want to share instantly.</p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <div class="proj-section" style="margin-top:0;">
+      <h2>Guides &amp; Documentation</h2>
+      <p>Whether you're new to Markdown publishing or exploring what's possible, these resources will help you get up and running.</p>
+      <ul class="feat-list">
+        <li><strong>New here?</strong> Start with <a href="http://leap.docsify-this.net/" class="tlink" target="_blank" rel="noopener">Leap into Open Publishing with Docsify&#8209;This</a>, an interactive workshop guide with hands-on challenges &ndash; get publishing in minutes.</li>
+        <li><strong>Want a full walkthrough?</strong> Follow the <a href="http://publishing.docsify-this.net" class="tlink" target="_blank" rel="noopener">Markdown Publishing Guide</a>, with step-by-step instructions and advanced workflows.</li>
+        <li><strong>Need comprehensive reference?</strong> Browse the <a href="http://readme.docsify-this.net/" class="tlink" target="_blank" rel="noopener">Official Documentation</a> for Docsify&#8209;This &ndash; displayed with, what else, Docsify&#8209;This.</li>
+      </ul>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Video Tutorials</h2>
+      <p>Prefer watching to reading? These short demos (about a minute each) show key Docsify&#8209;This features in action.</p>
+      <div class="links">
+        <a class="cta tk" href="https://www.youtube.com/playlist?list=PLk2Bz5X36nXArvm20GbOdjAIornJbWmhe" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Watch the Video Series</a>
+      </div>
+    </div>
+
+    <div class="proj-section">
+      <h2>Community</h2>
+      <p>Get support, follow along, or help shape where Docsify&#8209;This goes next.</p>
+      <ul class="feat-list">
+        <li><strong>Follow along</strong> &ndash; <a href="https://mastodon.social/@hibbittsdesign" class="tlink" target="_blank" rel="noopener">@hibbittsdesign@mastodon.social</a> on Mastodon, or subscribe via <a href="https://mastodon.social/@hibbittsdesign.rss" class="tlink" target="_blank" rel="noopener">RSS</a></li>
+        <li><strong>Ask a question</strong> &ndash; join the <a href="https://discord.gg/docsify" class="tlink" target="_blank" rel="noopener">Docsify Discord Community</a> (visit the #docsify-this channel)</li>
+        <li><strong>Show your support</strong> &ndash; add a &#9733; to the <a href="https://github.com/hibbitts-design/docsify-this" class="tlink" target="_blank" rel="noopener">Docsify&#8209;This GitHub Repository</a> to help others find it</li>
+        <li><strong>Get in touch directly</strong> &ndash; email <a href="mailto:paul@hibbittsdesign.org" class="tlink">paul@hibbittsdesign.org</a></li>
+        <li><strong>Help shape its direction</strong> &ndash; <a href="https://forms.gle/ViYu2ZdPmj6PeQ439" class="tlink" target="_blank" rel="noopener">share your feedback</a> on Docsify&#8209;This in just a few minutes</li>
+      </ul>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Need Help or Customization?</h2>
+      <p>Looking for the main project page? See <a href="docsify-this.html" class="tlink">Docsify&#8209;This</a>. If you&#8217;d like support with setup, workflows, embedding, or custom development, see <a href="services.html" class="tlink">Additional Professional Services &amp; Support</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>, guided by his <a href="systems-oriented-design.html" class="tlink">systems-oriented approach to design</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+    <div class="flinks">
+      <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+      <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
