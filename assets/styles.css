@@ -164,6 +164,16 @@ a{color:inherit;}
    lines, so this widens the line box (font-size unchanged keeps them still
    reading as the same weight of headline, just fewer, more even lines) */
 .hero h1.essay-title{max-width:30ch;}
+/* compact tier tag on each dedicated page, echoing the homepage ladder's
+   dot-marker styling so a visitor who lands here directly (skipping the
+   homepage) still sees which of the three capability tiers this is */
+.tier-track{margin:22px 0 28px; font-family:var(--font-mono); font-size:var(--text-min); text-transform:uppercase; letter-spacing:0.02em;}
+.tier-step{display:inline-flex; align-items:center; gap:6px; color:var(--ink-faint);}
+.tier-dot{width:8px; height:8px; border-radius:50%; border:1.5px solid var(--ink-faint); background:transparent; flex-shrink:0;}
+.tier-step.current{color:var(--ink); font-weight:700;}
+.tier-step.current.tk .tier-dot{background:var(--teal); border-color:var(--teal);}
+.tier-step.current.am .tier-dot{background:var(--amber); border-color:var(--amber);}
+.tier-step.current.green .tier-dot{background:var(--green); border-color:var(--green);}
 .hero .lede{
   margin:26px 0 0;
   font-size:1.42rem;
