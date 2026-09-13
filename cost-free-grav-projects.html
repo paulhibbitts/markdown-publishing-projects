@@ -1,0 +1,316 @@
+<!doctype html>
+<!-- Developed with the assistance of Claude Code (claude.ai) -->
+<!-- Body copy on this page uses real, hand-written <a>/<strong> tags, not
+     Markdown syntax -- every link and emphasis exists in the raw HTML for
+     crawlers and visitors that don't execute JavaScript. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GOOGLE ANALYTICS START (managed by tools/sync_boilerplate.py -- edit this file, not the copies inlined in each page) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW4N72FHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BW4N72FHR');
+</script>
+<!-- GOOGLE ANALYTICS END -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
+
+<!-- ====================================================================
+     SITE METADATA — page title, search/social descriptions, structured data.
+     Shares a domain with the other pages (hibbittsdesign.org).
+     ==================================================================== -->
+<title>Cost-Free Grav Projects | HibbittsDesign.org</title>
+<meta name="description" content="Four fully open-source Grav skeletons for course hubs, multi-course sites, and open publishing spaces – no database required, with a browser-based Admin panel.">
+<link rel="canonical" href="https://hibbittsdesign.org/cost-free-grav-projects.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hibbittsdesign.org/cost-free-grav-projects.html">
+<meta property="og:title" content="Cost-Free Grav Projects | HibbittsDesign.org">
+<meta property="og:description" content="Four fully open-source Grav skeletons for course hubs, multi-course sites, and open publishing spaces – no database required, with a browser-based Admin panel.">
+<meta property="og:image" content="https://hibbittsdesign.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@hibbittsdesign">
+<meta name="twitter:title" content="Cost-Free Grav Projects | HibbittsDesign.org">
+<meta name="twitter:description" content="Four fully open-source Grav skeletons for course hubs, multi-course sites, and open publishing spaces – no database required, with a browser-based Admin panel.">
+<meta name="twitter:image" content="https://hibbittsdesign.org/assets/og-image.png">
+
+<!-- Structured data for search engines — one entry per free skeleton -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Cost-Free Grav Projects",
+  "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "position": 1,
+      "name": "Grav Open Course Hub",
+      "url": "https://demo.hibbittsdesign.org/grav-open-course-hub",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-course-hub",
+      "description": "A free, single-course hub with weekly module navigation, a browser-based Admin panel, and optional Git Sync.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 2,
+      "name": "Grav Open MultiCourse Hub",
+      "url": "https://demo.hibbittsdesign.org/grav-open-multi-course-hub",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-multicourse-hub",
+      "description": "The Open Course Hub structure plus a top-level course-selection layer for managing several courses from one site.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 3,
+      "name": "Grav Open Publishing Space",
+      "url": "https://demo.hibbittsdesign.org/grav-open-publishing-quark/",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-open-publishing-space",
+      "description": "Collaborative Markdown publishing on the free Quark theme, for writers and publishers rather than course content.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 4,
+      "name": "Grav Learn2 with Git Sync",
+      "url": "https://demo.hibbittsdesign.org/grav-learn2-git-sync/",
+      "codeRepository": "https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync",
+      "description": "A documentation site on the free Learn2 theme, with built-in search and RSS/Atom feeds.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Public Sans and JetBrains Mono are self-hosted (assets/fonts/), not
+     loaded from Google Fonts, so the page has no external dependency and
+     works fully offline once deployed. See the @font-face rules at the
+     top of styles.css to swap in different fonts or weights. -->
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ 1. HEADER / NAV ============ -->
+  <header class="site-head">
+    <span class="brand-line"><a class="brand" href="https://hibbittsdesign.org/"><img class="brand-mark" src="assets/hd-logo.png" width="83" height="178" alt=""><span><strong>HibbittsDesign<wbr>.org</strong></span></a></span>
+    <nav>
+      <div class="nav-item">
+        <a href="index.html#projects" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="docsify-this.html">Docsify&#8209;This</a>
+          <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+          <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+          <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+          <a href="cost-free-grav-projects.html">Cost-Free Grav Projects</a>
+        </div>
+      </div>
+      <a href="about.html">About Paul</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- "Projects" dropdown: standard disclosure pattern. Tabbing to the
+         trigger does NOT open it by itself -- only an explicit activation
+         (click, or Enter on the focused link) toggles the .open class,
+         which is the single source of truth for visibility. This matters:
+         an earlier version also opened on :focus-within, which meant
+         Escape's "close and return focus to the trigger" put focus right
+         back on the one element that reopened it, so Escape silently did
+         nothing whenever focus was on a menu item rather than the trigger
+         itself. Keeping focus and openness independent avoids that. The
+         trigger's real href (index.html#projects) is the fallback if this
+         script doesn't run at all.
+         This script must stay nested inside the header element (not placed
+         after it), since sync_boilerplate.py's regex for this block stops
+         at the first closing header tag it finds -- placed outside, a
+         script here would be left behind as stale debris on the next
+         resync instead of being replaced along with everything else.
+         NOTE: do not spell out the literal opening/closing header markup
+         in this comment -- doing so once fooled that same regex into
+         matching too little and corrupting all pages using this partial. -->
+    <script>
+      document.querySelectorAll('.nav-item').forEach(function (item) {
+        var trigger = item.querySelector('.dropdown-trigger');
+        function setOpen(open) {
+          item.classList.toggle('open', open);
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          setOpen(!item.classList.contains('open'));
+        });
+        item.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && item.classList.contains('open')) {
+            setOpen(false);
+            trigger.focus();
+          }
+        });
+        item.addEventListener('focusout', function (e) {
+          if (!item.contains(e.relatedTarget)) { setOpen(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!item.contains(e.target) && item.classList.contains('open')) { setOpen(false); }
+        });
+      });
+    </script>
+  </header><!-- ============ 2. GRAV PROJECTS — heading, intro, four skeleton cards, plugin callout ============ -->
+  <section class="hero">
+    <div class="badge-row eyebrow-row">
+      <span class="badge green">Cost-Free &amp; Open Source</span>
+      <span class="badge plain">MIT Licensed</span>
+      <span class="badge plain">Grav 2</span>
+      <span class="badge plain">PHP 8.3+</span>
+    </div>
+    <h1>Cost-Free Grav Projects</h1>
+    <p class="tier-track"><span class="tier-step green current"><span class="tier-dot"></span>Full CMS</span></p>
+    <p class="lede"><a href="https://getgrav.org" class="tlink" target="_blank" rel="noopener">Grav</a> (15.7k &#9733;s) is a flat-file CMS that stores content as plain Markdown files instead of a database, edited through a browser-based Admin panel, and runs on any standard web host with PHP 8.3+. These four skeletons &ndash; fully open-source, built on the newly released Grav 2 &ndash; cover course hubs, multi-course sites, and open publishing spaces, well suited to OER and other open educational content.</p>
+    <p class="lede">Each shares the same portable Markdown files and optional Git Sync &ndash; Course Hub, MultiCourse Hub, and Publishing Space also support LMS-ready embedding for platforms like Canvas and Moodle.</p>
+    <p class="jump-links">Jump to: <a href="#choose-your-skeleton" class="tlink">Choose Your Skeleton</a> &middot; <a href="#git-page-link-plugin" class="tlink">Git Page Link Plugin</a></p>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="grav-projects">
+    <h2 id="choose-your-skeleton" style="font-size:1.3rem; margin:0 0 14px;">Choose Your Skeleton</h2>
+    <div class="grav-grid">
+      <div class="grav-card" id="grav-open-course-hub">
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-open-course-hub" target="_blank" rel="noopener"><img src="assets/grav-open-course-hub-thumb.webp" width="800" height="639" alt="Screenshot of the Grav Open Course Hub home page, showing a hero photo, course navigation, and upcoming due dates"></a></div>
+        <h3>Grav Open Course Hub</h3>
+        <div class="badge-row"><span class="badge plain sm"><span aria-hidden="true">&#9733;</span> 47</span></div>
+        <p>A free, single-course hub with weekly module navigation &ndash; refreshed in 2026 with accessibility improvements and a Dark Mode option.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-open-course-hub" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#course-hub-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-course-hub" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="grav-card" id="grav-open-multicourse-hub">
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-open-multi-course-hub" target="_blank" rel="noopener"><img src="assets/grav-open-multicourse-hub-thumb.webp" width="800" height="639" alt="Screenshot of the Grav Open MultiCourse Hub welcome page, showing a course-selection layer with three example courses"></a></div>
+        <h3>Grav Open MultiCourse Hub</h3>
+        <div class="badge-row"><span class="badge plain sm"><span aria-hidden="true">&#9733;</span> 6</span></div>
+        <p>The same Course Hub structure, plus a top-level course-selection layer for managing several courses from one site &ndash; refreshed in 2026 with accessibility improvements and a Dark Mode option.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-open-multi-course-hub" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#multicourse-hub-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="grav-card" id="grav-open-publishing-space">
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-open-publishing-quark/" target="_blank" rel="noopener"><img src="assets/grav-open-publishing-thumb.webp" width="800" height="639" alt="Screenshot of the Grav Open Publishing Space home page on the Quark theme, showing a full-width hero image above a blog listing"></a></div>
+        <h3>Grav Open Publishing Space</h3>
+        <div class="badge-row"><span class="badge plain sm"><span aria-hidden="true">&#9733;</span> 27</span></div>
+        <p>Collaborative Markdown publishing on the free Quark theme &ndash; suited to writers and publishers rather than course content.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-open-publishing-quark/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#open-publishing-space-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-open-publishing-space" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="grav-card" id="grav-learn2-git-sync">
+        <div class="grav-thumb"><a href="https://demo.hibbittsdesign.org/grav-learn2-git-sync/" target="_blank" rel="noopener"><img src="assets/grav-learn2-thumb.webp" width="800" height="639" alt="Screenshot of a Grav Learn2 with Git Sync documentation page, showing a dark sidebar with chapter navigation next to article content"></a></div>
+        <h3>Grav Learn2 with Git Sync</h3>
+        <div class="badge-row"><span class="badge plain sm"><span aria-hidden="true">&#9733;</span> 37</span></div>
+        <p>A documentation site on the free Learn2 theme, with built-in search, RSS/Atom feeds, and support for a Docs-as-Code approach &ndash; refreshed in 2026 with updated visual style.</p>
+        <div class="links">
+          <a class="cta" href="https://demo.hibbittsdesign.org/grav-learn2-git-sync/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+          <a class="cta plain" href="https://getgrav.org/downloads/skeletons#learn2-with-git-sync-site" target="_blank" rel="noopener">Download</a>
+          <a class="cta plain" href="https://github.com/hibbitts-design/grav-skeleton-learn2-with-git-sync" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <p>All four share the same open, portable Markdown files, a browser-based Admin panel, and optional Git Sync for version-controlled collaboration.</p>
+
+    <p class="projects-foot"><a href="testimonials.html#grav-open-course-hub">See what educators are saying about the Grav Open Course Hub &rarr;</a></p>
+
+    <div class="grav-plugin" id="git-page-link-plugin">
+      <h2>Also Free: Git Page Link Plugin</h2>
+      <p>The <a href="https://github.com/hibbitts-design/grav-plugin-git-page-link" class="tlink" target="_blank" rel="noopener">Git Page Link Plugin</a> works with most Grav themes &ndash; not just these four skeletons. It adds an "Edit this Page" link back to the Markdown source, for open authoring and community contribution.</p>
+      <div class="links">
+        <a class="cta" href="https://demo.hibbittsdesign.org/grav-git-page-link-plugin/" target="_blank" rel="noopener"><span class="arrow">&rarr;</span> Demo</a>
+        <a class="cta plain" href="https://github.com/hibbitts-design/grav-plugin-git-page-link" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="grav-plugin">
+      <h2>Looking for the Premium Option?</h2>
+      <p>Grav Helios Course Hub and Grav Helios Open Reader share the same Markdown-and-Git-Sync foundation as these four skeletons, with a Grav Premium Helios theme, context-aware search, and a versioning system &ndash; at the cost of a one-time Premium Helios theme license. Building a companion site for one or more courses? See <a href="grav-helios-course-hub.html" class="tlink">Grav Helios Course Hub</a>. Publishing a structured open textbook or guide? See <a href="grav-helios-open-reader.html" class="tlink">Grav Helios Open Reader</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. FOOTER — byline + links ============ -->
+  <footer>
+    <div class="fmap">
+      <div class="fmap-col">
+        <p class="fmap-label">Projects</p>
+        <a href="docsify-this.html">Docsify&#8209;This</a>
+        <a href="docsify-starter-kits.html">Docsify Starter Kits</a>
+        <a href="grav-helios-course-hub.html">Grav Helios Course Hub</a>
+        <a href="grav-helios-open-reader.html">Grav Helios Open Reader</a>
+        <a href="cost-free-grav-projects.html">Cost-Free Grav Projects</a>
+      </div>
+      <div class="fmap-col">
+        <p class="fmap-label">Resources</p>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="systems-oriented-design.html">Systems-Oriented Design in Practice</a>
+        <a href="open-source-with-a-positive-vibe.html">Open Source with a Positive Vibe</a>
+        <a href="dual-purpose-documentation-framework.html">A Dual-Purpose Documentation Framework</a>
+        <a href="docsify-this-tutorials-workshops.html">Docsify&#8209;This Tutorials &amp; Workshops</a>
+      </div>
+      <div class="fmap-col">
+        <p class="fmap-label">Info</p>
+        <a href="about.html">About Paul</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="fcolophon">
+      <p>Built by <a href="about.html" class="tlink">Paul Hibbitts</a>. All projects are open source and MIT licensed. If one is useful to you, a GitHub &#9733; helps someone else find it. Questions or need help? <a href="contact.html" class="tlink">Get in touch</a> &ndash; or see <a href="services.html" class="tlink">Services</a> for professional support&nbsp;options.</p>
+      <div class="ffollow">
+        <p class="fmap-label">Follow</p>
+        <div class="flinks">
+          <a href="https://github.com/hibbitts-design" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://mastodon.social/@hibbittsdesign" target="_blank" rel="noopener">Mastodon</a>
+          <a href="https://bsky.app/profile/hibbittsdesign.org" target="_blank" rel="noopener">Bluesky</a>
+          <a href="https://ca.linkedin.com/in/paulhibbitts" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

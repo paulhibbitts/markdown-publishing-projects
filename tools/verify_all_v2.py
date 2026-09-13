@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 # opened in tools/, in the site root, or anywhere else.
 os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-PAGES = ["index.html", "contact.html", "services.html", "fully-open-source-grav-projects.html",
+PAGES = ["index.html", "contact.html", "services.html", "cost-free-grav-projects.html",
          "about.html", "open-source-with-a-positive-vibe.html", "testimonials.html",
          "dual-purpose-documentation-framework.html", "systems-oriented-design.html",
          "docsify-this.html", "docsify-this-tutorials-workshops.html", "docsify-starter-kits.html", "grav-helios-course-hub.html",

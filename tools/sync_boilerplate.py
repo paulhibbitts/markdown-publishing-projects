@@ -36,7 +36,7 @@ _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 _SITE_ROOT = os.path.dirname(_SCRIPT_DIR)
 _PARTIALS_DIR = os.path.join(_SCRIPT_DIR, "partials")
 
-PAGES = ["index.html", "contact.html", "services.html", "fully-open-source-grav-projects.html",
+PAGES = ["index.html", "contact.html", "services.html", "cost-free-grav-projects.html",
          "about.html", "open-source-with-a-positive-vibe.html", "testimonials.html",
          "dual-purpose-documentation-framework.html", "systems-oriented-design.html",
          "docsify-this.html", "docsify-this-tutorials-workshops.html", "docsify-starter-kits.html", "grav-helios-course-hub.html",
