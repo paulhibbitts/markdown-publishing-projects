@@ -869,12 +869,34 @@ footer{
   margin-top:100px;
   padding:36px 0 70px;
   border-top:1px solid var(--line);
+}
+/* compact site index -- three columns of actual site pages, kept to the
+   same muted text-min scale as the byline below it so it reads as a
+   footnote, not a second nav bar. Social/Follow links are deliberately
+   NOT a column here -- a sitemap maps pages within the site, and the
+   Follow links all go to external platforms, so they get their own
+   labeled block in .fcolophon instead of posing as a peer section. */
+.fmap{
+  display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
+  margin:0 0 32px;
+}
+.fmap-col{display:flex; flex-direction:column; gap:9px;}
+.fmap-label{
+  font-family:var(--font-mono); font-size:var(--text-min);
+  text-transform:uppercase; letter-spacing:0.04em;
+  color:var(--ink-faint); margin:0 0 3px;
+}
+.fmap-col a{font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
+.fmap-col a:hover,
+.fmap-col a:focus-visible{color:var(--link);}
+.fcolophon{
   display:flex;
   justify-content:space-between;
-  align-items:center;
+  align-items:flex-start;
   flex-wrap:wrap;
-  gap:14px;
+  gap:28px 32px;
 }
+.ffollow{display:flex; flex-direction:column; gap:9px;}
 footer p{font-size:var(--text-min); color:var(--ink-faint); margin:0;}
 footer .flinks{display:flex; flex-wrap:wrap; gap:14px 22px;}
 footer .flinks a{font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
@@ -910,4 +932,5 @@ footer .flinks a:focus-visible{color:var(--link);}
   .tools{padding:28px;}
   .tool{flex-direction:column; align-items:flex-start; gap:10px;}
   .prow{grid-template-columns:1fr; justify-items:start; gap:10px; padding:20px 24px;}
+  .fmap{grid-template-columns:1fr 1fr; gap:24px 20px;}
 }
