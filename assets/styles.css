@@ -899,9 +899,10 @@ footer{
 .ffollow{display:flex; flex-direction:column; gap:9px;}
 footer p{font-size:var(--text-min); color:var(--ink-faint); margin:0;}
 footer .flinks{display:flex; flex-wrap:wrap; gap:14px 22px;}
-footer .flinks a{font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
+footer .flinks a{display:inline-flex; align-items:center; gap:4px; font-size:var(--text-min); color:var(--ink-soft); text-decoration:none;}
 footer .flinks a:hover,
 footer .flinks a:focus-visible{color:var(--link);}
+footer .flinks svg{width:20px; height:20px; flex-shrink:0;}
 
 /* comparison / narrative sections on the dedicated project pages, reusing
    the Grav projects page's callout-box rhythm */
